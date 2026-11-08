@@ -1,0 +1,27 @@
+No files changed, compilation skipped
+Warning: Detected artifacts built from source files that no longer exist. Run `forge clean` to make sure builds are in sync with project files.
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper2.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper4.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper7.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper5.sol
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.1 gwei
+
+Estimated total gas used for script: 8186690
+
+Estimated amount required: 0.000818669 ETH
+
+==========================
+
+Transactions saved to: /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/broadcast/DeploySepolia.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/cache/DeploySepolia.s.sol/11155111/run-latest.json
+
+Error: Transaction Failure: 0xa7b8574ee810f7799128241aa67ef3b6f03d818788b5df7c67bfd76a846be76a

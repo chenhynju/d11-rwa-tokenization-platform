@@ -152,10 +152,10 @@ export default function Page(){
  return <main style={{maxWidth:960,margin:'40px auto',padding:24}}>
   <p style={{color:'#64d4bc'}}>RWA / {expectedChainId === 31337 ? 'LOCAL OPERATIONS' : 'SEPOLIA OPERATIONS'}</p>
   <h1>Permissioned asset console</h1>
-  <p style={{color:'#e8bf77'}}>Simulation only. Token ownership does not establish legal title or prove offchain reserves. {expectedChainId === 31337 ? 'Disposable local chain accounts sign transactions.' : 'Your connected wallet signs each transaction on Ethereum Sepolia. Issuer and reviewer require distinct addresses.'}</p>
+  <p style={{color:'#e8bf77'}}>Simulation only. Token ownership does not establish legal title or prove offchain reserves. {expectedChainId === 31337 ? 'Disposable local chain accounts sign transactions.' : 'Your connected wallet signs each transaction on the configured testnet. Issuer and reviewer require distinct addresses.'}</p>
   <div style={box}>
    <b>1. Chain</b> <span>{chain||'not connected'}</span><br/>
-   <button style={btn} disabled={busy} onClick={()=>guard(connect)}>{expectedChainId === 31337 ? 'Connect local chain' : 'Connect Sepolia wallet'}</button>
+   <button style={btn} disabled={busy} onClick={()=>guard(connect)}>{expectedChainId === 31337 ? 'Connect local chain' : 'Connect testnet wallet'}</button>
    {accounts.length>0&&<label>Acting account
     <select style={input} value={actor} onChange={e=>setActor(e.target.value)}>
      {accounts.map(a=><option key={a} value={a}>{a}</option>)}

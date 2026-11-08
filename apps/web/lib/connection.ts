@@ -1,7 +1,7 @@
 import type { EIP1193Provider } from "viem";
 export const expectedChainId = Number(process.env.NEXT_PUBLIC_RWA_CHAIN_ID ?? "31337");
-if (![31337, 11155111].includes(expectedChainId)) throw new Error("Only Anvil and Ethereum Sepolia are supported");
-export const rpcUrl = process.env.NEXT_PUBLIC_RWA_RPC_URL ?? (expectedChainId === 31337 ? "http://127.0.0.1:8545" : "https://ethereum-sepolia-rpc.publicnode.com");
+if (![31337, 11155111, 84532].includes(expectedChainId)) throw new Error("Only Anvil, Ethereum Sepolia and Base Sepolia are supported");
+export const rpcUrl = process.env.NEXT_PUBLIC_RWA_RPC_URL ?? (expectedChainId === 31337 ? "http://127.0.0.1:8545" : expectedChainId === 84532 ? "https://base-sepolia.gateway.tenderly.co" : "https://ethereum-sepolia-rpc.publicnode.com");
 const endpoint = new URL(rpcUrl);
 if (expectedChainId === 31337 && (endpoint.protocol !== "http:" || !["127.0.0.1", "localhost"].includes(endpoint.hostname))) throw new Error("Local unlocked accounts require a loopback RPC");
 if (expectedChainId !== 31337 && (endpoint.protocol !== "https:" || endpoint.username || endpoint.password)) throw new Error("Public RPC must use HTTPS without embedded credentials");
@@ -22,7 +22,7 @@ export async function connectionAccounts(): Promise<string[]> {
   if (Number(BigInt(await rpc("eth_chainId", []))) !== expectedChainId) throw new Error("RPC chain does not match the configured market");
   if (expectedChainId === 31337) return rpc("eth_accounts", []);
   const wallet = browserWallet();
-  if (Number(BigInt(await wallet.request({ method: "eth_chainId" }))) !== expectedChainId) throw new Error("Switch your wallet to Ethereum Sepolia");
+  if (Number(BigInt(await wallet.request({ method: "eth_chainId" }))) !== expectedChainId) throw new Error(expectedChainId === 84532 ? "Switch your wallet to Base Sepolia" : "Switch your wallet to Ethereum Sepolia");
   return wallet.request({ method: "eth_requestAccounts" });
 }
 export async function assertWalletContext(provider: EIP1193Provider, actor: string, chainId: number) {

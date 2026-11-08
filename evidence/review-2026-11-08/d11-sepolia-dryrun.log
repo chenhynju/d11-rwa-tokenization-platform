@@ -1,0 +1,33 @@
+11155111
+Compiling 1 files with Solc 0.8.38
+Solc 0.8.38 finished in 16.46s
+Compiler run successful!
+Warning: Detected artifacts built from source files that no longer exist. Run `forge clean` to make sure builds are in sync with project files.
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper5.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper2.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper7.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper4.sol
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated max fee per gas: 0.050000028 gwei
+Estimated base fee per gas: 0.000000014 gwei
+Estimated max priority fee per gas: 0.05 gwei
+
+Estimated total gas used for script: 8186690
+
+Estimated amount required: 0.00040933472922732 ETH
+
+==========================
+
+SIMULATION COMPLETE. To broadcast these transactions, add --broadcast and wallet configuration(s) to the previous command. See forge script --help for more.
+
+Transactions saved to: /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/broadcast/DeploySepolia.s.sol/11155111/dry-run/run-latest.json
+
+Sensitive values saved to: /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/cache/DeploySepolia.s.sol/11155111/dry-run/run-latest.json
+

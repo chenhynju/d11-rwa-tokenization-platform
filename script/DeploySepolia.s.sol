@@ -14,8 +14,12 @@ interface ScriptVm {
 contract DeploySepolia {
     ScriptVm constant vm = ScriptVm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
-    function run() external {
+    function run() public virtual {
         require(block.chainid == 11155111, "Ethereum Sepolia only");
+        _deploy();
+    }
+
+    function _deploy() internal {
         address reviewer = vm.envAddress("INDEPENDENT_REVIEWER");
         vm.startBroadcast();
         IdentityRegistry ids = new IdentityRegistry();

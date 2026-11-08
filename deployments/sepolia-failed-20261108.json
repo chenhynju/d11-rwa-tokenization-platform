@@ -1,0 +1,32 @@
+{
+  "status": "FAIL",
+  "auditedSourceCommit": "169991f3cc6ba0ebf181a7f8a5b3079890b25964",
+  "chainId": 11155111,
+  "transactionHash": "0xa7b8574ee810f7799128241aa67ef3b6f03d818788b5df7c67bfd76a846be76a",
+  "blockNumber": 12089832,
+  "gasLimit": 608934,
+  "gasUsed": 608934,
+  "receipt": {
+    "type": "0x2",
+    "status": "0x0",
+    "cumulativeGasUsed": "0x3fb4e74",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "logs": [],
+    "transactionHash": "0xa7b8574ee810f7799128241aa67ef3b6f03d818788b5df7c67bfd76a846be76a",
+    "from": "0x0118e172324801a6333e7d0faf7f9bb4ed72628f",
+    "to": null,
+    "contractAddress": "0x863cdac75fa786a5e3bd6426567fa892b3e94d02",
+    "gasUsed": "0x94aa6",
+    "effectiveGasPrice": "0x2faf08e",
+    "blockHash": "0x6a0a24a41f40e8dae4199f6d5fbde3bf76ededd3ccd0c5cf7313d3cf1d2e0fef",
+    "blockNumber": "0xb879e8",
+    "transactionIndex": "0x44",
+    "blobGasUsed": "0x0"
+  },
+  "note": "First creation transaction exhausted its gas limit. No contract accepted; remaining eight transactions were not sent. Local Cancun simulation does not establish compatibility with current Sepolia Glamsterdam state-gas accounting. No blind rebroadcast.",
+  "references": [
+    "https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement",
+    "https://blog.ethereum.org/2026/08/24/glamsterdam-repricing-testing"
+  ],
+  "nextStep": "Compare current remote eth_estimateGas and an Amsterdam-compatible execution model before a newly reviewed deployment plan."
+}

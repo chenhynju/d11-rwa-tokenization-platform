@@ -3,7 +3,9 @@ set -euo pipefail
 export ETH_RPC_URL=http://127.0.0.1:18673
 port=18673
 if cast chain-id >/dev/null 2>&1; then echo "Port occupied"; exit 1; fi
-anvil --port "$port" --silent >/dev/null 2>&1 &
+anvil_args=(--port "$port" --silent)
+if [[ -n ${ANVIL_HARDFORK:-} ]]; then anvil_args+=(--hardfork "$ANVIL_HARDFORK"); fi
+anvil "${anvil_args[@]}" >/dev/null 2>&1 &
 pid=$!
 trap 'kill "$pid" 2>/dev/null || true' EXIT
 for i in {1..40}; do cast chain-id >/dev/null 2>&1 && break; sleep .2; done
@@ -13,7 +15,7 @@ accounts=$(cast rpc eth_accounts)
 issuer=$(jq -r '.[0]' <<<"$accounts")
 export LOCAL_REVIEWER=$(jq -r '.[1]' <<<"$accounts")
 holder=$(jq -r '.[2]' <<<"$accounts")
-forge script script/Deploy.s.sol:Deploy --rpc-url "$ETH_RPC_URL" --sender "$issuer" --unlocked --broadcast >/dev/null
+forge script script/Deploy.s.sol:Deploy --rpc-url "$ETH_RPC_URL" --sender "$issuer" --unlocked --gas-estimate-multiplier "${DEPLOY_GAS_MULTIPLIER:-130}" --broadcast >/dev/null
 contract(){ jq -r --arg n "$1" '.transactions[]|select(.transactionType=="CREATE" and .contractName==$n)|.contractAddress' broadcast/Deploy.s.sol/31337/run-latest.json; }
 approval=$(contract InstitutionalApproval)
 token=$(contract PermissionedToken)

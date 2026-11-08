@@ -1,0 +1,19 @@
+Warning: Detected artifacts built from source files that no longer exist. Run `forge clean` to make sure builds are in sync with project files.
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper2.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper4.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper7.sol
+ - /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/foundry-pp/DeployHelper5.sol
+accounts issuer=0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 reviewer=0x70997970c51812dc3a010c7d01b50e0d17dc79c8 holder=0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc holder2=0x90f79bf6eb2c4f870365e785982e1f101e93b906
+{"supply":"200","holder":"50","transactions":["0xd34aa1ad6775367f7941b56afeaee87416fdab7e919ea580856e89edc3b9f6b8","0x9e69b14b47d90a0ead1b26f7beac2e621161c83ee763564af960cb42241fe303","0x0ab5f4c015c4b8bd9ae9013c9391d2b36898893c681a83b1cc86cb8365ba7e89","0x26a7a71b444f6a155845b76b5ddd08ee655734e90323f5c53eb2a3b41bb95eec","0xf959f24df32b06a613c2fe0fde584438378c03ee69f444b6ee782d1278cdc80d","0x9f99006454758a16c0d103b207208b03b4d541cf33dc44f99efb1a53ad0226d1","0x84d3b3ce2754c1d3420fc475ee7bccb4c8cc1ccf19295e603cf58b72b757da84","0x6ca89dea7c971e914e93533e1f871d17018b1e6401f7a766b01b9f07a7829c3d"]}
+PASS browser operations: dual issuance, transfer, reservation lock, settlement, replay rejection
+{
+  "matched": true,
+  "block": "13",
+  "blockHash": "0x83ad691dfd56dbd261771ae41a54e1af4674669bf22a6f837685fc0cd9b70249",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 2,
+  "registerTotal": "200",
+  "chainSupply": "200",
+  "differences": []
+}
+PASS ops demo: browser ledger reconciled with onchain register
