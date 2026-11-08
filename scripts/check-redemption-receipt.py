@@ -1,4 +1,5 @@
-"""Validate a synthetic receipt against a pending local-chain redemption."""
+"""Validate a synthetic receipt against a pending synthetic testnet redemption."""
+import os
 import hashlib
 import json
 import re
@@ -15,8 +16,11 @@ def validate(manager, path):
     fields = {"chainId", "manager", "holder", "reference", "units", "minorAmount", "currency", "paymentId"}
     if not isinstance(receipt, dict) or receipt.keys() != fields:
         raise ValueError("unexpected receipt fields")
-    if cast("chain-id") != "31337" or receipt["chainId"] != 31337:
-        raise ValueError("local chain required")
+    expected = int(os.environ.get("D11_RECEIPT_CHAIN_ID", "31337"))
+    if expected not in {31337, 84532}:
+        raise ValueError("unsupported synthetic receipt network")
+    if cast("chain-id") != str(expected) or type(receipt["chainId"]) is not int or receipt["chainId"] != expected:
+        raise ValueError("receipt network mismatch")
     if not re.fullmatch(r"0x[0-9a-f]{40}", manager) or receipt["manager"] != manager:
         raise ValueError("wrong manager")
     if not re.fullmatch(r"0x[0-9a-f]{40}", receipt["holder"]):

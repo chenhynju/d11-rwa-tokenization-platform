@@ -1,0 +1,12 @@
+Start verifying contract `0xFCCFe688ad81A4730E61aEE5d74D927036685008` deployed on base-sepolia
+
+Verifying on sourcify...
+Submitting verification for [CorporateActions] 0xFCCFe688ad81A4730E61aEE5d74D927036685008.
+Submitted contract for verification:
+	Verification Job ID: `9b892968-b9f4-473f-b4f1-3712df73d7e0`
+	URL: https://sourcify.dev/server/verify-ui/jobs/9b892968-b9f4-473f-b4f1-3712df73d7e0
+9b892968-b9f4-473f-b4f1-3712df73d7e0	https://sourcify.dev/server/verify-ui/jobs/9b892968-b9f4-473f-b4f1-3712df73d7e0
+
+Waiting for sourcify verification result...
+Contract successfully verified:
+Status: `exact_match`

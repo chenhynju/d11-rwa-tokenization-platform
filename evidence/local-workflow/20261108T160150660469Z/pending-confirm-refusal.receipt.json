@@ -1,0 +1,10 @@
+{
+  "chainId": 31337,
+  "manager": "0xd8058efe0198ae9dd7d563e1b4938dcbc86a1f81",
+  "holder": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+  "reference": "0x9ea5feacfd408b5a56cd8a0e3037e9b99aba04952f4c455eb3d6641ef475c1cb",
+  "units": 200,
+  "minorAmount": 20000,
+  "currency": "SIM",
+  "paymentId": "d11-base-synthetic-20261108"
+}

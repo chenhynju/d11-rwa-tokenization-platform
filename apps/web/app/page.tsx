@@ -33,9 +33,9 @@ function refFrom(text:string){
 export default function Page(){
  const [accounts,setAccounts]=useState<string[]>([]);
  const [actor,setActor]=useState('');
- const [token,setToken]=useState('');
- const [approval,setApproval]=useState('');
- const [ids,setIds]=useState('');
+ const [token,setToken]=useState(expectedChainId === 31337 ? '' : process.env.NEXT_PUBLIC_RWA_TOKEN_ADDRESS ?? '');
+ const [approval,setApproval]=useState(expectedChainId === 31337 ? '' : process.env.NEXT_PUBLIC_RWA_APPROVAL_ADDRESS ?? '');
+ const [ids,setIds]=useState(expectedChainId === 31337 ? '' : process.env.NEXT_PUBLIC_RWA_IDENTITY_REGISTRY ?? '');
  const [chain,setChain]=useState('');
  const [holder,setHolder]=useState('');
  const [refText,setRefText]=useState('demo-1');

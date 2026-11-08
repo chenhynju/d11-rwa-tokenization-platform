@@ -1,0 +1,12 @@
+Start verifying contract `0xfDD5d0022bd88D1F57d367904bfF45132E01604B` deployed on base-sepolia
+
+Verifying on sourcify...
+Submitting verification for [AssetRegistry] 0xfDD5d0022bd88D1F57d367904bfF45132E01604B.
+Submitted contract for verification:
+	Verification Job ID: `2baff55c-1cdf-4a59-b14c-f8f5592ed75c`
+	URL: https://sourcify.dev/server/verify-ui/jobs/2baff55c-1cdf-4a59-b14c-f8f5592ed75c
+2baff55c-1cdf-4a59-b14c-f8f5592ed75c	https://sourcify.dev/server/verify-ui/jobs/2baff55c-1cdf-4a59-b14c-f8f5592ed75c
+
+Waiting for sourcify verification result...
+Contract successfully verified:
+Status: `exact_match`

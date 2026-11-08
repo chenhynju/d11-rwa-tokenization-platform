@@ -12,3 +12,9 @@ out-halmos/
 crytic-export/
 report.md
 lcov.info
+
+.vercel/
+
+*.tsbuildinfo
+
+evidence/**/*.pending-*

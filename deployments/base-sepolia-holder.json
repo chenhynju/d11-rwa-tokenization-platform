@@ -1,0 +1,7 @@
+{
+  "chainId": 84532,
+  "status": "SMOKE_HOLDER_PREPARED",
+  "issuer": "0x0118e172324801a6333e7d0fAF7f9BB4ED72628F",
+  "holder": "0xa36AC794Fd5e936d52348A92005Da37ff1894e0e",
+  "purpose": "Synthetic testnet issuance and redemption; distinct keys, not proof of independent human custody"
+}

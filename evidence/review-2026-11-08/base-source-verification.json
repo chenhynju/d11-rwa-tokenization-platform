@@ -1,0 +1,51 @@
+[
+  {
+    "contract": "IdentityRegistry",
+    "address": "0x02fdf32b7fe4d6f626f0ae638d8fe96a6bd3c955",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-IdentityRegistry.log"
+  },
+  {
+    "contract": "ComplianceEngine",
+    "address": "0x28d13d3f18168e4cb27a034392a4311dd7d850fa",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-ComplianceEngine.log"
+  },
+  {
+    "contract": "PermissionedToken",
+    "address": "0xbd5f6ac0450c69cd9db3c2b4d7f6c9c3a6109771",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-PermissionedToken.log"
+  },
+  {
+    "contract": "InstitutionalApproval",
+    "address": "0x7b0132d20a636eb0a93f2f369a7b46a855a8b702",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-InstitutionalApproval.log"
+  },
+  {
+    "contract": "AssetRegistry",
+    "address": "0xfdd5d0022bd88d1f57d367904bff45132e01604b",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-AssetRegistry.log"
+  },
+  {
+    "contract": "CorporateActions",
+    "address": "0xfccfe688ad81a4730e61aee5d74d927036685008",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-CorporateActions.log"
+  },
+  {
+    "contract": "IssuanceManager",
+    "address": "0xe8e70e4ac8c752316e93d73c646a7ecf87ab7392",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "sourcify-IssuanceManager.log"
+  }
+]

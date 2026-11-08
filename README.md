@@ -1,5 +1,6 @@
 # D11 — RWA Tokenization Platform
 
+Base Sepolia release: seven deployed contracts are Sourcify exact-match verified. [Actual addresses, receipts and role checks](deployments/base-sepolia-20261108.json). Ethereum Sepolia compatibility and hosted acceptance remain separate gates.
 [Current self-assessment and release gates](docs/audit/review-2026-11-08.md) · [WSL source policy](docs/deployment/workspace-workflow.md)
 A local, fully simulated platform for permissioned bond-style units: identity eligibility,
 jurisdiction policy, holding limits, dual-party issuance, reserved redemption with
