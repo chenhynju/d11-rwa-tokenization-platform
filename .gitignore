@@ -18,3 +18,7 @@ lcov.info
 *.tsbuildinfo
 
 evidence/**/*.pending-*
+
+__pycache__/
+
+*.py[cod]

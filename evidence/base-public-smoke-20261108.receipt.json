@@ -1,0 +1,10 @@
+{
+  "chainId": 84532,
+  "manager": "0xe8e70e4ac8c752316e93d73c646a7ecf87ab7392",
+  "holder": "0xa36ac794fd5e936d52348a92005da37ff1894e0e",
+  "reference": "0x9ea5feacfd408b5a56cd8a0e3037e9b99aba04952f4c455eb3d6641ef475c1cb",
+  "units": 200,
+  "minorAmount": 20000,
+  "currency": "SIM",
+  "paymentId": "d11-base-synthetic-20261108"
+}

@@ -1,6 +1,6 @@
 # D11 — RWA Tokenization Platform
 
-Base Sepolia release: seven deployed contracts are Sourcify exact-match verified. [Actual addresses, receipts and role checks](deployments/base-sepolia-20261108.json). Ethereum Sepolia compatibility and hosted acceptance remain separate gates.
+Base Sepolia release: seven deployed contracts are Sourcify exact-match verified. The [three-role synthetic issuance, transfer and redemption workflow](docs/deployment/base-public-acceptance.md) passed on-chain. [Actual addresses, receipts and role checks](deployments/base-sepolia-20261108.json). Ethereum Sepolia compatibility and hosted acceptance remain separate gates.
 [Current self-assessment and release gates](docs/audit/review-2026-11-08.md) · [WSL source policy](docs/deployment/workspace-workflow.md)
 A local, fully simulated platform for permissioned bond-style units: identity eligibility,
 jurisdiction policy, holding limits, dual-party issuance, reserved redemption with
@@ -127,15 +127,15 @@ Status: configured and locally mirrored; remote execution has not been run from 
 
 | Item | Status | Evidence / note |
 | --- | --- | --- |
-| Industrial code & explicit Foundry config | PASS | `foundry.toml` pinned solc 0.8.24 |
-| Compile & tests pass | PASS | 46/46 local |
+| Industrial code & explicit Foundry config | PASS | `foundry.toml` pinned solc 0.8.38 |
+| Compile & tests pass | PASS | 48 Solidity tests; 5 frontend tests; dated review evidence |
 | Branch coverage ≥90% on core source | PASS | Platform 92.11%, InstitutionalApproval 100%, CorporateActions 100% branches; `evidence/coverage.txt` |
 | Fuzz/invariant verification | PASS | 2 campaigns, 0 reverts |
 | Static + manual review with PoC triage | PASS | Slither/Aderyn dispositioned in review doc |
 | Economic security gate | PASS (simulation scope) | `docs/economics/` |
 | Reproducible build | PASS | pinned toolchain, lockfiles |
 | Local deployment | PASS | smoke scripts deploy fresh each run |
-| Public testnet deployment | NOT RUN | broadcasting requires explicit authorization |
+| Public testnet deployment | PASS (Base Sepolia) | seven exact-match verified contracts; ten workflow transactions, five rejection checks; Ethereum Sepolia compatibility BLOCKED |
 | Frontend demo | PASS (local) | `scripts/ops-demo.sh` |
 | Dependency audit | BLOCKED | npm registry unreachable from this network (mirror 404 / ECONNRESET) |
 | README & docs | PASS | this file |
