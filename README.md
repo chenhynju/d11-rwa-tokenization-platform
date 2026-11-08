@@ -137,7 +137,7 @@ Status: configured and locally mirrored; remote execution has not been run from 
 | Local deployment | PASS | smoke scripts deploy fresh each run |
 | Public testnet deployment | PASS (Base Sepolia) | seven exact-match verified contracts; ten workflow transactions, five rejection checks; Ethereum Sepolia compatibility BLOCKED |
 | Frontend demo | PASS (local) | `scripts/ops-demo.sh` |
-| Dependency audit | BLOCKED | npm registry unreachable from this network (mirror 404 / ECONNRESET) |
+| Dependency audit | PASS (high-severity threshold) | npm audit gate passed in GitHub Actions [42503687728](https://github.com/chenhynju/d11-rwa-tokenization-platform/actions/runs/42503687728); no zero-advisory claim |
 | README & docs | PASS | this file |
 
 ## Learning Mastery Gate
@@ -150,3 +150,7 @@ pending the walkthrough exercises in `docs/learning/` and `docs/code-walkthrough
 Code and documentation were produced with AI assistance under human direction; the independent
 review above is likewise AI-assisted. Foundry supplies compiler/testing/Anvil infrastructure.
 Nothing here is an independent security audit or a certification.
+
+## Hosted UI evidence
+
+[Protected Vercel deployment](https://d11-rwa-tokenization-platform-jgbftpkea-purelamp.vercel.app). Authenticated Chromium desktop and 390px mobile rendering passed with no page errors or horizontal overflow. [Evidence](evidence/hosted-ui-20261109/acceptance.json). This check does not establish hosted wallet transaction acceptance. Access protection remains enabled.

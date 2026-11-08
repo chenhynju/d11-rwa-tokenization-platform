@@ -1,0 +1,12 @@
+{
+  "project": "d11-rwa-tokenization-platform",
+  "status": "PASS",
+  "scope": "Authenticated hosted UI render; no wallet signing or public workflow claim",
+  "httpStatus": 200,
+  "title": "RWA Audit Console",
+  "h1": "Permissioned asset console",
+  "mobileOverflow": false,
+  "pageErrors": [],
+  "url": "https://d11-rwa-tokenization-platform-jgbftpkea-purelamp.vercel.app",
+  "sourceCommit": "9fd6e3dda31f8c418d5aaa2e847f05bf7d92b128"
+}
