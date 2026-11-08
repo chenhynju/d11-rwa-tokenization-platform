@@ -1,0 +1,63 @@
+Compiling 6 files with Solc 0.8.24
+Solc 0.8.24 finished in 39.29s
+Compiler run successful!
+
+Ran 44 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 144132)
+[PASS] testApprovalAdminAndBoundaries() (gas: 508185)
+[PASS] testAssetRegistration() (gas: 150594)
+[PASS] testCancelledApproval() (gas: 157471)
+[PASS] testCannotRedeemAnotherHolder() (gas: 65109)
+[PASS] testCapExhaustion() (gas: 196660)
+[PASS] testConstructorBoundaries() (gas: 6535)
+[PASS] testCountryRejected() (gas: 84025)
+[PASS] testDistribution() (gas: 291138)
+[PASS] testDistributionBranches() (gas: 502673)
+[PASS] testDuplicateIssue() (gas: 34986)
+[PASS] testExpiredClaim() (gas: 32570)
+[PASS] testExpiredSender() (gas: 55997)
+[PASS] testFreeze() (gas: 94117)
+[PASS] testFrozenIssue() (gas: 115084)
+[PASS] testFrozenReceiver() (gas: 96153)
+[PASS] testFuzzConservation(uint96) (runs: 1024, μ: 107709, ~: 108375)
+[PASS] testHolderCanCancelBeforePaymentApproval() (gas: 202231)
+[PASS] testHoldingLimit() (gas: 100047)
+[PASS] testIndependentApproval() (gas: 379541)
+[PASS] testInfiniteAllowance() (gas: 145267)
+[PASS] testInsufficientAllowance() (gas: 37236)
+[PASS] testInsufficientBalance() (gas: 46674)
+[PASS] testInvalidIdentity() (gas: 31066)
+[PASS] testManagerCannotRebind() (gas: 35073)
+[PASS] testPause() (gas: 70930)
+[PASS] testPausedIssue() (gas: 92292)
+[PASS] testRedeem() (gas: 89952)
+[PASS] testRedemptionCannotConsumeIssuanceReference() (gas: 286317)
+[PASS] testRedemptionReservationsRemainBackedAcrossSettlement() (gas: 653607)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 154955)
+[PASS] testRevocation() (gas: 89526)
+[PASS] testSameApproverRejected() (gas: 6880)
+[PASS] testSelfTransfer() (gas: 61537)
+[PASS] testTransfer() (gas: 108650)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 85215)
+[PASS] testUnauthorizedIdentity() (gas: 34478)
+[PASS] testUnauthorizedIssue() (gas: 33817)
+[PASS] testUnauthorizedMint() (gas: 34697)
+[PASS] testUnauthorizedPause() (gas: 32228)
+[PASS] testUnknownRejected() (gas: 61739)
+[PASS] testZeroIssue() (gas: 63558)
+[PASS] testZeroLimit() (gas: 29839)
+[PASS] testZeroRecipient() (gas: 39975)
+Suite result: ok. 44 passed; 0 failed; 0 skipped; finished in 83.02ms (90.89ms CPU time)
+
+Ran 1 test for test/Invariant.t.sol:ConservationInvariant
+[PASS] invariantSupplyConservation() (runs: 128, calls: 8192, reverts: 0)
+
+╭-----------------+----------+-------+---------+----------╮
+| Contract        | Selector | Calls | Reverts | Discards |
++=========================================================+
+| TransferHandler | move     | 8192  | 0       | 0        |
+╰-----------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.33s (2.32s CPU time)
+
+Ran 2 test suites in 2.33s (2.41s CPU time): 45 tests passed, 0 failed, 0 skipped (45 total tests)

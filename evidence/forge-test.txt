@@ -1,0 +1,90 @@
+No files changed, compilation skipped
+
+Ran 46 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 144132)
+[PASS] testApprovalAdminAndBoundaries() (gas: 508185)
+[PASS] testAssetRegistration() (gas: 150594)
+[PASS] testCancelledApproval() (gas: 157515)
+[PASS] testCannotRedeemAnotherHolder() (gas: 65109)
+[PASS] testCapExhaustion() (gas: 196660)
+[PASS] testConstructorBoundaries() (gas: 6535)
+[PASS] testCountryRejected() (gas: 84025)
+[PASS] testDistribution() (gas: 292279)
+[PASS] testDistributionBranches() (gas: 503830)
+[PASS] testDuplicateIssue() (gas: 34986)
+[PASS] testExpiredClaim() (gas: 32570)
+[PASS] testExpiredSender() (gas: 56041)
+[PASS] testFreeze() (gas: 94161)
+[PASS] testFrozenIssue() (gas: 115106)
+[PASS] testFrozenReceiver() (gas: 96197)
+[PASS] testFuzzConservation(uint96) (runs: 1024, μ: 108063, ~: 108397)
+[PASS] testHolderCanCancelBeforePaymentApproval() (gas: 205084)
+[PASS] testHoldingLimit() (gas: 100047)
+[PASS] testIndependentApproval() (gas: 379585)
+[PASS] testInfiniteAllowance() (gas: 145267)
+[PASS] testInstitutionalRedemptionProxies() (gas: 859080)
+[PASS] testInsufficientAllowance() (gas: 37236)
+[PASS] testInsufficientBalance() (gas: 46718)
+[PASS] testInvalidIdentity() (gas: 31088)
+[PASS] testManagerCannotRebind() (gas: 35117)
+[PASS] testPause() (gas: 70952)
+[PASS] testPausedIssue() (gas: 92314)
+[PASS] testRedeem() (gas: 89996)
+[PASS] testRedemptionCannotConsumeIssuanceReference() (gas: 286339)
+[PASS] testRedemptionRequestBoundaries() (gas: 370648)
+[PASS] testRedemptionReservationsRemainBackedAcrossSettlement() (gas: 659275)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 154999)
+[PASS] testRevocation() (gas: 89548)
+[PASS] testSameApproverRejected() (gas: 6924)
+[PASS] testSelfTransfer() (gas: 61537)
+[PASS] testTransfer() (gas: 108694)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 85259)
+[PASS] testUnauthorizedIdentity() (gas: 34478)
+[PASS] testUnauthorizedIssue() (gas: 33861)
+[PASS] testUnauthorizedMint() (gas: 34697)
+[PASS] testUnauthorizedPause() (gas: 32228)
+[PASS] testUnknownRejected() (gas: 61739)
+[PASS] testZeroIssue() (gas: 63602)
+[PASS] testZeroLimit() (gas: 29839)
+[PASS] testZeroRecipient() (gas: 39997)
+Suite result: ok. 46 passed; 0 failed; 0 skipped; finished in 124.67ms (157.49ms CPU time)
+
+Ran 1 test for test/Invariant.t.sol:ConservationInvariant
+[PASS] invariantSupplyConservation() (runs: 128, calls: 8192, reverts: 0)
+
+╭-----------------+----------+-------+---------+----------╮
+| Contract        | Selector | Calls | Reverts | Discards |
++=========================================================+
+| TransferHandler | move     | 8192  | 0       | 0        |
+╰-----------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.99s (3.96s CPU time)
+
+Ran 1 test for test/RedemptionInvariant.t.sol:RedemptionInvariant
+[PASS]
+RedemptionInvariant invariants:
+[PASS] invariantReservationsBacked
+[PASS] invariantSupplyAccounting
+ RedemptionInvariant invariants (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------+----------+-------+---------+----------╮
+| Contract          | Selector | Calls | Reverts | Discards |
++===========================================================+
+| RedemptionHandler | approve  | 1197  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | burn     | 1190  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | cancel   | 1161  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | confirm  | 1211  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | move     | 1145  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | reject   | 1126  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | request  | 1162  | 0       | 0        |
+╰-------------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 4.49s (4.46s CPU time)
+
+Ran 3 test suites in 4.52s (8.60s CPU time): 48 tests passed, 0 failed, 0 skipped (48 total tests)

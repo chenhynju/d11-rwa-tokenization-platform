@@ -1,0 +1,118 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "incremental": true,
+        "module": "esnext",
+        "esModuleInterop": true,
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "allowImportingTsExtensions": true,
+        "allowSyntheticDefaultImports": true,
+        "resolvePackageJsonExports": true,
+        "resolvePackageJsonImports": true,
+        "preserveConstEnums": true,
+        "useDefineForClassFields": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "strictBuiltinIteratorReturn": true,
+        "alwaysStrict": true,
+        "useUnknownInCatchVariables": true
+    },
+    "files": [
+        "./next-env.d.ts",
+        "./.next/types/cache-life.d.ts",
+        "./.next/types/routes.d.ts",
+        "./.next/types/validator.ts",
+        "./.next/types/app/layout.ts",
+        "./.next/types/app/page.ts",
+        "./lib/connection.ts",
+        "./lib/receipt.ts",
+        "./tests/receipt.test.ts",
+        "./tests/wallet-context.test.ts",
+        "./app/layout.tsx",
+        "./app/page.tsx"
+    ],
+    "include": [
+        "next-env.d.ts",
+        ".next/types/**/*.ts",
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
+
+> d11-rwa-tokenization-web@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+(node:11607) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/apps/web/tests/receipt.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/apps/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ synthetic payment conversion preserves exact whole units and cents (15.220652ms)
+✔ receipt conversion rejects zero, negative and the first unsafe amount (1.83129ms)
+(node:11608) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/apps/web/tests/wallet-context.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/apps/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Sepolia writes bind sender, chain and estimated gas (22.992976ms)
+✔ wallet chain change during gas estimation prevents submission (4.047493ms)
+✔ wallet account change during gas estimation prevents submission (1.506266ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1560.079514
+
+> d11-rwa-tokenization-web@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.29
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 60s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/4) ...
+   Generating static pages (1/4) 
+   Generating static pages (2/4) 
+   Generating static pages (3/4) 
+ ✓ Generating static pages (4/4)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    89.8 kB         193 kB
+└ ○ /_not-found                            994 B         104 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/255-73938ce8a8eac1ad.js       46.6 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+  └ other shared chunks (total)          1.91 kB
+
+
+○  (Static)  prerendered as static content
+

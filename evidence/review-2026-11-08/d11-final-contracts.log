@@ -1,0 +1,268 @@
+Formatted /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/test/RedemptionSymbolic.t.sol
+Compiling 5 files with Solc 0.8.38
+Solc 0.8.38 finished in 65.42s
+Compiler run successful!
+
+Ran 46 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 144186)
+[PASS] testApprovalAdminAndBoundaries() (gas: 508286)
+[PASS] testAssetRegistration() (gas: 150777)
+[PASS] testCancelledApproval() (gas: 157886)
+[PASS] testCannotRedeemAnotherHolder() (gas: 65241)
+[PASS] testCapExhaustion() (gas: 196758)
+[PASS] testConstructorBoundaries() (gas: 6453)
+[PASS] testCountryRejected() (gas: 84141)
+[PASS] testDistribution() (gas: 292824)
+[PASS] testDistributionBranches() (gas: 504165)
+[PASS] testDuplicateIssue() (gas: 35070)
+[PASS] testExpiredClaim() (gas: 32673)
+[PASS] testExpiredSender() (gas: 56249)
+[PASS] testFreeze() (gas: 94375)
+[PASS] testFrozenIssue() (gas: 115221)
+[PASS] testFrozenReceiver() (gas: 96411)
+[PASS] testFuzzConservation(uint96) (runs: 1024, μ: 107718, ~: 108312)
+[PASS] testHolderCanCancelBeforePaymentApproval() (gas: 205405)
+[PASS] testHoldingLimit() (gas: 100103)
+[PASS] testIndependentApproval() (gas: 380172)
+[PASS] testInfiniteAllowance() (gas: 145292)
+[PASS] testInstitutionalRedemptionProxies() (gas: 859264)
+[PASS] testInsufficientAllowance() (gas: 37413)
+[PASS] testInsufficientBalance() (gas: 46854)
+[PASS] testInvalidIdentity() (gas: 31176)
+[PASS] testManagerCannotRebind() (gas: 35205)
+[PASS] testPause() (gas: 71127)
+[PASS] testPausedIssue() (gas: 92378)
+[PASS] testRedeem() (gas: 90061)
+[PASS] testRedemptionCannotConsumeIssuanceReference() (gas: 286818)
+[PASS] testRedemptionRequestBoundaries() (gas: 371379)
+[PASS] testRedemptionReservationsRemainBackedAcrossSettlement() (gas: 659666)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 155321)
+[PASS] testRevocation() (gas: 89664)
+[PASS] testSameApproverRejected() (gas: 6859)
+[PASS] testSelfTransfer() (gas: 61470)
+[PASS] testTransfer() (gas: 108598)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 85571)
+[PASS] testUnauthorizedIdentity() (gas: 34637)
+[PASS] testUnauthorizedIssue() (gas: 34026)
+[PASS] testUnauthorizedMint() (gas: 34775)
+[PASS] testUnauthorizedPause() (gas: 32379)
+[PASS] testUnknownRejected() (gas: 61790)
+[PASS] testZeroIssue() (gas: 63654)
+[PASS] testZeroLimit() (gas: 29929)
+[PASS] testZeroRecipient() (gas: 40113)
+Suite result: ok. 46 passed; 0 failed; 0 skipped; finished in 390.03ms (445.23ms CPU time)
+
+Ran 1 test for test/Invariant.t.sol:ConservationInvariant
+[PASS] invariantSupplyConservation() (runs: 128, calls: 8192, reverts: 0)
+
+╭-----------------+----------+-------+---------+----------╮
+| Contract        | Selector | Calls | Reverts | Discards |
++=========================================================+
+| TransferHandler | move     | 8192  | 0       | 0        |
+╰-----------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 22.27s (22.25s CPU time)
+
+Ran 1 test for test/RedemptionInvariant.t.sol:RedemptionInvariant
+[PASS]
+RedemptionInvariant invariants:
+[PASS] invariantReservationsBacked
+[PASS] invariantSupplyAccounting
+ RedemptionInvariant invariants (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------+----------+-------+---------+----------╮
+| Contract          | Selector | Calls | Reverts | Discards |
++===========================================================+
+| RedemptionHandler | approve  | 1225  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | burn     | 1182  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | cancel   | 1153  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | confirm  | 1183  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | move     | 1132  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | reject   | 1171  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | request  | 1146  | 0       | 0        |
+╰-------------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 26.06s (25.94s CPU time)
+
+Ran 3 test suites in 26.13s (48.72s CPU time): 48 tests passed, 0 failed, 0 skipped (48 total tests)
+No files changed, compilation skipped
+
+Ran 46 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 144186)
+[PASS] testApprovalAdminAndBoundaries() (gas: 508286)
+[PASS] testAssetRegistration() (gas: 150777)
+[PASS] testCancelledApproval() (gas: 157886)
+[PASS] testCannotRedeemAnotherHolder() (gas: 65241)
+[PASS] testCapExhaustion() (gas: 196758)
+[PASS] testConstructorBoundaries() (gas: 6453)
+[PASS] testCountryRejected() (gas: 84141)
+[PASS] testDistribution() (gas: 292824)
+[PASS] testDistributionBranches() (gas: 504165)
+[PASS] testDuplicateIssue() (gas: 35070)
+[PASS] testExpiredClaim() (gas: 32673)
+[PASS] testExpiredSender() (gas: 56249)
+[PASS] testFreeze() (gas: 94375)
+[PASS] testFrozenIssue() (gas: 115221)
+[PASS] testFrozenReceiver() (gas: 96411)
+[PASS] testFuzzConservation(uint96) (runs: 1024, μ: 107718, ~: 108312)
+[PASS] testHolderCanCancelBeforePaymentApproval() (gas: 205405)
+[PASS] testHoldingLimit() (gas: 100103)
+[PASS] testIndependentApproval() (gas: 380172)
+[PASS] testInfiniteAllowance() (gas: 145292)
+[PASS] testInstitutionalRedemptionProxies() (gas: 859264)
+[PASS] testInsufficientAllowance() (gas: 37413)
+[PASS] testInsufficientBalance() (gas: 46854)
+[PASS] testInvalidIdentity() (gas: 31176)
+[PASS] testManagerCannotRebind() (gas: 35205)
+[PASS] testPause() (gas: 71127)
+[PASS] testPausedIssue() (gas: 92378)
+[PASS] testRedeem() (gas: 90061)
+[PASS] testRedemptionCannotConsumeIssuanceReference() (gas: 286818)
+[PASS] testRedemptionRequestBoundaries() (gas: 371379)
+[PASS] testRedemptionReservationsRemainBackedAcrossSettlement() (gas: 659666)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 155321)
+[PASS] testRevocation() (gas: 89664)
+[PASS] testSameApproverRejected() (gas: 6859)
+[PASS] testSelfTransfer() (gas: 61470)
+[PASS] testTransfer() (gas: 108598)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 85571)
+[PASS] testUnauthorizedIdentity() (gas: 34637)
+[PASS] testUnauthorizedIssue() (gas: 34026)
+[PASS] testUnauthorizedMint() (gas: 34775)
+[PASS] testUnauthorizedPause() (gas: 32379)
+[PASS] testUnknownRejected() (gas: 61790)
+[PASS] testZeroIssue() (gas: 63654)
+[PASS] testZeroLimit() (gas: 29929)
+[PASS] testZeroRecipient() (gas: 40113)
+Suite result: ok. 46 passed; 0 failed; 0 skipped; finished in 723.91ms (1.04s CPU time)
+
+Ran 1 test suite in 733.14ms (723.91ms CPU time): 46 tests passed, 0 failed, 0 skipped (46 total tests)
+Warning: optimizer settings and `viaIR` have been disabled for accurate coverage reports.
+If you encounter "stack too deep" errors, consider using `--ir-minimum` which enables `viaIR` with minimum optimization resolving most of the errors.
+See more: https://book.getfoundry.sh/guides/best-practices/stack-too-deep
+Compiling 10 files with Solc 0.8.38
+Solc 0.8.38 finished in 8.69s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 46 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 157705)
+[PASS] testApprovalAdminAndBoundaries() (gas: 520233)
+[PASS] testAssetRegistration() (gas: 154726)
+[PASS] testCancelledApproval() (gas: 159794)
+[PASS] testCannotRedeemAnotherHolder() (gas: 66677)
+[PASS] testCapExhaustion() (gas: 203838)
+[PASS] testConstructorBoundaries() (gas: 6653)
+[PASS] testCountryRejected() (gas: 87946)
+[PASS] testDistribution() (gas: 297936)
+[PASS] testDistributionBranches() (gas: 514372)
+[PASS] testDuplicateIssue() (gas: 35705)
+[PASS] testExpiredClaim() (gas: 33907)
+[PASS] testExpiredSender() (gas: 57961)
+[PASS] testFreeze() (gas: 95240)
+[PASS] testFrozenIssue() (gas: 117192)
+[PASS] testFrozenReceiver() (gas: 97435)
+[PASS] testFuzzConservation(uint96) (runs: 1024, μ: 121723, ~: 122215)
+[PASS] testHolderCanCancelBeforePaymentApproval() (gas: 215723)
+[PASS] testHoldingLimit() (gas: 106706)
+[PASS] testIndependentApproval() (gas: 389964)
+[PASS] testInfiniteAllowance() (gas: 153947)
+[PASS] testInstitutionalRedemptionProxies() (gas: 890689)
+[PASS] testInsufficientAllowance() (gas: 38850)
+[PASS] testInsufficientBalance() (gas: 47329)
+[PASS] testInvalidIdentity() (gas: 31939)
+[PASS] testManagerCannotRebind() (gas: 34493)
+[PASS] testPause() (gas: 72552)
+[PASS] testPausedIssue() (gas: 94511)
+[PASS] testRedeem() (gas: 93975)
+[PASS] testRedemptionCannotConsumeIssuanceReference() (gas: 295911)
+[PASS] testRedemptionRequestBoundaries() (gas: 383724)
+[PASS] testRedemptionReservationsRemainBackedAcrossSettlement() (gas: 698490)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 160010)
+[PASS] testRevocation() (gas: 94941)
+[PASS] testSameApproverRejected() (gas: 6711)
+[PASS] testSelfTransfer() (gas: 68244)
+[PASS] testTransfer() (gas: 119776)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 85961)
+[PASS] testUnauthorizedIdentity() (gas: 34853)
+[PASS] testUnauthorizedIssue() (gas: 33854)
+[PASS] testUnauthorizedMint() (gas: 35160)
+[PASS] testUnauthorizedPause() (gas: 32569)
+[PASS] testUnknownRejected() (gas: 66694)
+[PASS] testZeroIssue() (gas: 64523)
+[PASS] testZeroLimit() (gas: 30048)
+[PASS] testZeroRecipient() (gas: 40564)
+Suite result: ok. 46 passed; 0 failed; 0 skipped; finished in 2.17s (4.67s CPU time)
+
+Ran 1 test for test/RedemptionInvariant.t.sol:RedemptionInvariant
+[PASS]
+RedemptionInvariant invariants:
+[PASS] invariantReservationsBacked
+[PASS] invariantSupplyAccounting
+ RedemptionInvariant invariants (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------+----------+-------+---------+----------╮
+| Contract          | Selector | Calls | Reverts | Discards |
++===========================================================+
+| RedemptionHandler | approve  | 1225  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | burn     | 1182  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | cancel   | 1153  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | confirm  | 1183  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | move     | 1132  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | reject   | 1171  | 0       | 0        |
+|-------------------+----------+-------+---------+----------|
+| RedemptionHandler | request  | 1146  | 0       | 0        |
+╰-------------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 50.90s (50.67s CPU time)
+
+Ran 1 test for test/Invariant.t.sol:ConservationInvariant
+[PASS] invariantSupplyConservation() (runs: 128, calls: 8192, reverts: 0)
+
+╭-----------------+----------+-------+---------+----------╮
+| Contract        | Selector | Calls | Reverts | Discards |
++=========================================================+
+| TransferHandler | move     | 8192  | 0       | 0        |
+╰-----------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 53.00s (52.97s CPU time)
+
+Ran 3 test suites in 53.08s (106.08s CPU time): 48 tests passed, 0 failed, 0 skipped (48 total tests)
+
+╭--------------------------------+------------------+-------------------+----------------+-----------------╮
+| File                           | % Lines          | % Statements      | % Branches     | % Funcs         |
++==========================================================================================================+
+| script/Deploy.s.sol            | 0.00% (0/15)     | 0.00% (0/21)      | 0.00% (0/2)    | 0.00% (0/1)     |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| script/DeploySepolia.s.sol     | 0.00% (0/15)     | 0.00% (0/21)      | 0.00% (0/2)    | 0.00% (0/1)     |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| src/CorporateActions.sol       | 100.00% (19/19)  | 100.00% (15/15)   | 100.00% (8/8)  | 100.00% (4/4)   |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| src/InstitutionalApproval.sol  | 100.00% (33/33)  | 100.00% (42/42)   | 100.00% (7/7)  | 100.00% (9/9)   |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| src/Platform.sol               | 99.30% (141/142) | 100.00% (133/133) | 92.11% (35/38) | 97.22% (35/36)  |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| test/ApprovalSymbolic.t.sol    | 0.00% (0/14)     | 0.00% (0/20)      | 0.00% (0/1)    | 0.00% (0/2)     |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| test/Invariant.t.sol           | 100.00% (8/8)    | 100.00% (9/9)     | N/A (0/0)      | 100.00% (2/2)   |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| test/RedemptionInvariant.t.sol | 80.65% (50/62)   | 66.67% (46/69)    | 66.67% (8/12)  | 100.00% (10/10) |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| test/RedemptionSymbolic.t.sol  | 0.00% (0/67)     | 0.00% (0/108)     | 0.00% (0/4)    | 0.00% (0/7)     |
+|--------------------------------+------------------+-------------------+----------------+-----------------|
+| Total                          | 66.93% (251/375) | 55.94% (245/438)  | 78.38% (58/74) | 83.33% (60/72)  |
+╰--------------------------------+------------------+-------------------+----------------+-----------------╯
+Wrote LCOV report.
+{"status": "PASS", "compiler": "0.8.38", "instrumentation": "non-IR coverage; production via-IR configuration remains unchanged", "command": ["forge", "coverage", "--fuzz-seed", "0x20261108", "--report", "summary", "--report", "lcov"], "metrics": [{"SF": "src/CorporateActions.sol", "LF": "19", "LH": "19", "BRF": "8", "BRH": "8"}, {"SF": "src/InstitutionalApproval.sol", "LF": "33", "LH": "33", "BRF": "7", "BRH": "7"}, {"SF": "src/Platform.sol", "LF": "142", "LH": "141", "BRF": "38", "BRH": "35"}], "sourceHashes": {"src/CorporateActions.sol": "baf334fc53ac4b97763ef9d493b59a85a7313f0f1f8c5563f2bcee12b46bf387", "src/Platform.sol": "c812eb71626d9e80aca1b56c4ea4085bbbcb44c392033f59e61237f0d0b66e82", "src/InstitutionalApproval.sol": "fbca1d68fe5533484e9d55713006e53c6f71f73742460118d11d5c219b461b99"}}

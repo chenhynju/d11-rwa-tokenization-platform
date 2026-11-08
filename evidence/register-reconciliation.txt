@@ -1,0 +1,28 @@
+PASS institutional deployment, issuer rejected, independent reviewer approved, holder balance 100
+{
+  "matched": true,
+  "block": "5",
+  "blockHash": "0x97334fb50e34d7b5a334829523849d470cbd9617e63552164e7e2ef1716ebbf3",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 1,
+  "registerTotal": "100",
+  "chainSupply": "100",
+  "differences": []
+}
+{
+  "matched": false,
+  "block": "5",
+  "blockHash": "0x97334fb50e34d7b5a334829523849d470cbd9617e63552164e7e2ef1716ebbf3",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 1,
+  "registerTotal": "99",
+  "chainSupply": "100",
+  "differences": [
+    {
+      "address": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+      "registerUnits": "99",
+      "chainUnits": "100"
+    }
+  ]
+}
+PASS synthetic register match and mismatch

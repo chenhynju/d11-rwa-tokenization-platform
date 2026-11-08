@@ -1,0 +1,16 @@
+
+> d11-rwa-tokenization-web@0.1.0 typecheck
+> tsc --noEmit
+
+lib/receipt.ts(3,16): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+lib/receipt.ts(3,64): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+lib/receipt.ts(5,62): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(5,24): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(5,28): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(5,33): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(5,75): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(8,55): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(13,24): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(13,29): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(13,67): error TS2737: BigInt literals are not available when targeting lower than ES2020.
+tests/receipt.test.ts(13,74): error TS2737: BigInt literals are not available when targeting lower than ES2020.

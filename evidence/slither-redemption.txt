@@ -1,0 +1,55 @@
+
+Detector: reentrancy-events
+Reentrancy in IssuanceManager.cancelRedemption(bytes32) (src/Platform.sol#273-279):
+	External calls:
+	- token.release(msg.sender,request.units) (src/Platform.sol#277)
+	Event emitted after the call(s):
+	- RedemptionCancelled(msg.sender,ref) (src/Platform.sol#278)
+Reentrancy in IssuanceManager.confirmRedemption(address,bytes32,bytes32,bytes32) (src/Platform.sol#298-313):
+	External calls:
+	- token.release(holder,request.units) (src/Platform.sol#310)
+	- token.burn(holder,request.units) (src/Platform.sol#311)
+	Event emitted after the call(s):
+	- RedemptionSettled(holder,ref,receipt,payment,request.units) (src/Platform.sol#312)
+Reentrancy in InstitutionalApproval.execute(bytes32) (src/InstitutionalApproval.sol#42-49):
+	External calls:
+	- manager.issue(ref,r.investor,r.amount) (src/InstitutionalApproval.sol#47)
+	Event emitted after the call(s):
+	- Executed(ref,msg.sender) (src/InstitutionalApproval.sol#48)
+Reentrancy in IssuanceManager.issue(bytes32,address,uint256) (src/Platform.sol#248-253):
+	External calls:
+	- token.mint(investor,amount) (src/Platform.sol#251)
+	Event emitted after the call(s):
+	- Issued(ref,investor,amount) (src/Platform.sol#252)
+Reentrancy in IssuanceManager.redeem(bytes32,uint256) (src/Platform.sol#256-261):
+	External calls:
+	- token.burn(msg.sender,amount) (src/Platform.sol#259)
+	Event emitted after the call(s):
+	- Redeemed(ref,msg.sender,amount) (src/Platform.sol#260)
+Reentrancy in IssuanceManager.rejectUnpaidRedemption(address,bytes32) (src/Platform.sol#289-295):
+	External calls:
+	- token.release(holder,request.units) (src/Platform.sol#293)
+	Event emitted after the call(s):
+	- RedemptionCancelled(holder,ref) (src/Platform.sol#294)
+Reentrancy in IssuanceManager.requestRedemption(bytes32,uint256) (src/Platform.sol#264-271):
+	External calls:
+	- token.reserve(msg.sender,units) (src/Platform.sol#269)
+	Event emitted after the call(s):
+	- RedemptionRequested(msg.sender,ref,units) (src/Platform.sol#270)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
+
+Detector: timestamp
+IdentityRegistry.attest(address,uint16,uint64,bytes32) (src/Platform.sol#26-30) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0,invalid claim) (src/Platform.sol#27)
+IdentityRegistry.verified(address) (src/Platform.sol#37-39) uses timestamp for comparisons
+	Dangerous comparisons:
+	- identities[wallet].expires > block.timestamp (src/Platform.sol#38)
+AssetRegistry.register(bytes32,bytes32,uint64,uint256,address) (src/Platform.sol#90-101) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0 && assets[id].token == address(0),invalid asset) (src/Platform.sol#94-98)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+. analyzed (8 contracts with 102 detectors), 10 result(s) found
+'forge clean' running (wd: /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform)
+'forge config --json' running
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform)

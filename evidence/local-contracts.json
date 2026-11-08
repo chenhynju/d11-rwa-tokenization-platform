@@ -1,0 +1,37 @@
+{
+  "network": "disposable Anvil",
+  "chainId": 31337,
+  "contracts": [
+    {
+      "contract": "IdentityRegistry",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "hash": "0x9c4bc8c0f2cbaf23e5c37b6bef6bea7c2378add55b0e3cba92fa41b3d08c692d"
+    },
+    {
+      "contract": "ComplianceEngine",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "hash": "0xf8ac2730d9a253c7e584481f8f6d1f69760b2c1f7f656d6fbdfb4aef83e40ab7"
+    },
+    {
+      "contract": "PermissionedToken",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "hash": "0xf917057d0975aa783a746cf14cdeb7140698561bf78fcfcf12c0fba2365b5a5d"
+    },
+    {
+      "contract": "IssuanceManager",
+      "address": "0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9",
+      "hash": "0xc02380b8fd4dce7a55db74c8898a87936842dc51ea51cd1f271b5122d34839f1"
+    },
+    {
+      "contract": "AssetRegistry",
+      "address": "0x0165878a594ca255338adfa4d48449f69242eb8f",
+      "hash": "0x12b6619296a8718b6a1a34cc32e837cd2be592d7b98033a3fb0b7f9f420973eb"
+    },
+    {
+      "contract": "CorporateActions",
+      "address": "0x2279b7a0a67db372996a5fab50d91eaa73d2ebe6",
+      "hash": "0x209591d83d389f66a5192cb17911438797ab4a8a49f750d3afec63991a3b6ade"
+    }
+  ],
+  "codePresent": true
+}

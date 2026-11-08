@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+out/
+cache/
+broadcast/
+node_modules/
+.next/
+*.key
+
+out-halmos/
+crytic-export/
+report.md
+lcov.info

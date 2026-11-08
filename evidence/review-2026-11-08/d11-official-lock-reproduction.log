@@ -1,0 +1,28 @@
+
+added 40 packages in 4m
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+> d11-rwa-tokenization-web@0.1.0 typecheck
+> tsc --noEmit
+
+
+> d11-rwa-tokenization-web@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+(node:9511) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/apps/web/tests/wallet-context.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/apps/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Sepolia writes bind sender, chain and estimated gas (19.865301ms)
+✔ wallet chain change during gas estimation prevents submission (3.871329ms)
+✔ wallet account change during gas estimation prevents submission (1.489124ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2173.246532

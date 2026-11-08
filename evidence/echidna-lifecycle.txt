@@ -1,0 +1,15 @@
+Invalid option `--solc'
+
+Usage: echidna [--version] FILES [--workers N] [--server PORT] 
+               [--contract CONTRACT] [--config CONFIG] [--format FORMAT] 
+               [--corpus-dir PATH] [--coverage-dir PATH] [--test-mode ARG] 
+               [--all-contracts] [--timeout INTEGER] [--test-limit INTEGER] 
+               [--rpc-block BLOCK] [--rpc-url URL] [--shrink-limit INTEGER] 
+               [--seq-len INTEGER] [--contract-addr ADDRESS] 
+               [--deployer ADDRESS] [--sender ADDRESS] [--seed SEED] 
+               [--disable-slither] [--crytic-args ARGS] [--solc-args ARGS] 
+               [--sym-exec BOOL] [--sym-exec-target SELECTOR] 
+               [--sym-exec-timeout INTEGER] [--sym-exec-n-solvers INTEGER] 
+               [--disable-onchain-sources]
+
+  EVM property-based testing framework

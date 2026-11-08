@@ -1,0 +1,67 @@
+[
+  {
+    "project": "D11",
+    "command": [
+      "forge",
+      "coverage",
+      "--ir-minimum",
+      "--report",
+      "summary",
+      "--report",
+      "lcov",
+      "--fuzz-runs",
+      "256"
+    ],
+    "cwd": "/home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform",
+    "startedAt": "2026-11-08T07:20:55.356341+00:00",
+    "seconds": 66.86,
+    "exitCode": 0,
+    "executionStatus": "PASS",
+    "log": "/home/chenhy/workspace/web3-portfolio/portfolio-ops/evidence/2026-11-08/extended-04-D11.log"
+  },
+  {
+    "project": "D11",
+    "command": [
+      "slither",
+      ".",
+      "--filter-paths",
+      "test/|script/|lib/",
+      "--json",
+      "/home/chenhy/workspace/web3-portfolio/portfolio-ops/evidence/2026-11-08/d11-slither.json"
+    ],
+    "cwd": "/home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform",
+    "startedAt": "2026-11-08T07:22:01.708863+00:00",
+    "seconds": 14.52,
+    "exitCode": 255,
+    "executionStatus": "REVIEW_REQUIRED",
+    "log": "/home/chenhy/workspace/web3-portfolio/portfolio-ops/evidence/2026-11-08/extended-05-D11.log"
+  },
+  {
+    "project": "D11",
+    "command": [
+      "aderyn",
+      ".",
+      "--output",
+      "/home/chenhy/workspace/web3-portfolio/portfolio-ops/evidence/2026-11-08/d11-aderyn.json"
+    ],
+    "cwd": "/home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform",
+    "startedAt": "2026-11-08T07:22:16.232428+00:00",
+    "seconds": 30.66,
+    "exitCode": 0,
+    "executionStatus": "PASS",
+    "log": "/home/chenhy/workspace/web3-portfolio/portfolio-ops/evidence/2026-11-08/extended-06-D11.log"
+  },
+  {
+    "project": "D11",
+    "command": [
+      "bash",
+      "scripts/institutional-smoke.sh"
+    ],
+    "cwd": "/home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform",
+    "startedAt": "2026-11-08T07:22:46.366311+00:00",
+    "seconds": 74.23,
+    "exitCode": 0,
+    "executionStatus": "PASS",
+    "log": "/home/chenhy/workspace/web3-portfolio/portfolio-ops/evidence/2026-11-08/extended-07-D11.log"
+  }
+]

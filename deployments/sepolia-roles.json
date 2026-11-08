@@ -1,0 +1,7 @@
+{
+  "chainId": 11155111,
+  "status": "ROLES_PREPARED_NOT_DEPLOYED",
+  "issuer": "0x0118e172324801a6333e7d0fAF7f9BB4ED72628F",
+  "reviewer": "0xEf83Edb09a3b1a75B14eFd56D4684f7C8774EdaC",
+  "purpose": "Synthetic testnet issuance and redemption; distinct keys, not proof of independent human custody"
+}

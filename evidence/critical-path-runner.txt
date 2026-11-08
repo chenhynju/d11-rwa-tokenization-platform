@@ -1,0 +1,3 @@
+Echidna 2.3.3
+Symbolic test result: 1 passed; 0 failed; time: 0.76s
+echidna_supply_accounting: passing

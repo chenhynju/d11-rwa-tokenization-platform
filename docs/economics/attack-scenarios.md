@@ -1,0 +1,4 @@
+# Attack review
+Unauthorized issuance is rejected by owner and manager checks. Unknown, revoked, expired and excluded-country transfers revert. Freeze and pause stop transfer paths; allowance is reverted atomically on failure. Holding limits apply to resulting wallet balance, including issuance. Self-transfers do not double-count holdings.
+
+Flash loans, spot-price manipulation and share inflation have no executable extraction path in this prototype because there are no deposits, collateral, oracle, onchain cash or exchange calculations. Snapshot manipulation remains an offchain allocation risk: corporate-action inputs are manually reconciled, not derived from current balances. Multiple verified wallets can bypass a person-level limit. Administrator compromise remains a major trusted-role risk.

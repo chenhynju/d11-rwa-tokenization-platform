@@ -1,0 +1,7 @@
+Warning: Detected artifacts built from source files that no longer exist. Run `forge clean` to make sure builds are in sync with project files.
+ - /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform/foundry-pp/DeployHelper4.sol
+ - /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform/foundry-pp/DeployHelper5.sol
+ - /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform/foundry-pp/DeployHelper7.sol
+ - /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform/foundry-pp/DeployHelper2.sol
+PASS institutional deployment, issuer rejected, independent reviewer approved, holder balance 100
+{"block":"4","supply":"100","cap":"10000","paused":false,"balance":"100","frozen":false}

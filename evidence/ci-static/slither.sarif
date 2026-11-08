@@ -1,0 +1,287 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Slither",
+          "informationUri": "https://github.com/crytic/slither",
+          "version": "0.11.6",
+          "rules": [
+            {
+              "id": "2-1-reentrancy-events",
+              "name": "reentrancy-events",
+              "properties": {
+                "precision": "high",
+                "security-severity": "3.0"
+              },
+              "shortDescription": {
+                "text": "Reentrancy vulnerabilities"
+              },
+              "help": {
+                "text": "Apply the [`check-effects-interactions` pattern](https://docs.soliditylang.org/en/latest/security-considerations.html#re-entrancy)."
+              }
+            },
+            {
+              "id": "2-1-timestamp",
+              "name": "timestamp",
+              "properties": {
+                "precision": "high",
+                "security-severity": "3.0"
+              },
+              "shortDescription": {
+                "text": "Block timestamp"
+              },
+              "help": {
+                "text": "Avoid relying on `block.timestamp`."
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in InstitutionalApproval.execute(bytes32) (src/InstitutionalApproval.sol#42-49):\n\tExternal calls:\n\t- manager.issue(ref,r.investor,r.amount) (src/InstitutionalApproval.sol#47)\n\tEvent emitted after the call(s):\n\t- Executed(ref,msg.sender) (src/InstitutionalApproval.sol#48)\n",
+            "markdown": "Reentrancy in [InstitutionalApproval.execute(bytes32)](src/InstitutionalApproval.sol#L42-L49):\n\tExternal calls:\n\t- [manager.issue(ref,r.investor,r.amount)](src/InstitutionalApproval.sol#L47)\n\tEvent emitted after the call(s):\n\t- [Executed(ref,msg.sender)](src/InstitutionalApproval.sol#L48)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/InstitutionalApproval.sol"
+                },
+                "region": {
+                  "startLine": 42,
+                  "endLine": 49
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "03f1f5e969de6937192aeff7bf44389b17aed613a32675ef58487b43e6780202"
+          }
+        },
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in IssuanceManager.confirmRedemption(address,bytes32,bytes32,bytes32) (src/Platform.sol#302-317):\n\tExternal calls:\n\t- token.release(holder,request.units) (src/Platform.sol#314)\n\t- token.burn(holder,request.units) (src/Platform.sol#315)\n\tEvent emitted after the call(s):\n\t- RedemptionSettled(holder,ref,receipt,payment,request.units) (src/Platform.sol#316)\n",
+            "markdown": "Reentrancy in [IssuanceManager.confirmRedemption(address,bytes32,bytes32,bytes32)](src/Platform.sol#L302-L317):\n\tExternal calls:\n\t- [token.release(holder,request.units)](src/Platform.sol#L314)\n\t- [token.burn(holder,request.units)](src/Platform.sol#L315)\n\tEvent emitted after the call(s):\n\t- [RedemptionSettled(holder,ref,receipt,payment,request.units)](src/Platform.sol#L316)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 302,
+                  "endLine": 317
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "340decc13d2e6522571b8544fbe95e888f7a84424d3c90fc886efd0c58d0b06c"
+          }
+        },
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in IssuanceManager.cancelRedemption(bytes32) (src/Platform.sol#277-283):\n\tExternal calls:\n\t- token.release(msg.sender,request.units) (src/Platform.sol#281)\n\tEvent emitted after the call(s):\n\t- RedemptionCancelled(msg.sender,ref) (src/Platform.sol#282)\n",
+            "markdown": "Reentrancy in [IssuanceManager.cancelRedemption(bytes32)](src/Platform.sol#L277-L283):\n\tExternal calls:\n\t- [token.release(msg.sender,request.units)](src/Platform.sol#L281)\n\tEvent emitted after the call(s):\n\t- [RedemptionCancelled(msg.sender,ref)](src/Platform.sol#L282)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 277,
+                  "endLine": 283
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "5a197197e69e9ca8c16b8f6bf36f386bbb8da3603e901d59aa5600595f3ecced"
+          }
+        },
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in IssuanceManager.redeem(bytes32,uint256) (src/Platform.sol#260-265):\n\tExternal calls:\n\t- token.burn(msg.sender,amount) (src/Platform.sol#263)\n\tEvent emitted after the call(s):\n\t- Redeemed(ref,msg.sender,amount) (src/Platform.sol#264)\n",
+            "markdown": "Reentrancy in [IssuanceManager.redeem(bytes32,uint256)](src/Platform.sol#L260-L265):\n\tExternal calls:\n\t- [token.burn(msg.sender,amount)](src/Platform.sol#L263)\n\tEvent emitted after the call(s):\n\t- [Redeemed(ref,msg.sender,amount)](src/Platform.sol#L264)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 260,
+                  "endLine": 265
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "892bd1b2f77ad76ad9c9c5affac0a1a42490bc7d286bfdf487e4b71121a299b7"
+          }
+        },
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in IssuanceManager.requestRedemption(bytes32,uint256) (src/Platform.sol#268-275):\n\tExternal calls:\n\t- token.reserve(msg.sender,units) (src/Platform.sol#273)\n\tEvent emitted after the call(s):\n\t- RedemptionRequested(msg.sender,ref,units) (src/Platform.sol#274)\n",
+            "markdown": "Reentrancy in [IssuanceManager.requestRedemption(bytes32,uint256)](src/Platform.sol#L268-L275):\n\tExternal calls:\n\t- [token.reserve(msg.sender,units)](src/Platform.sol#L273)\n\tEvent emitted after the call(s):\n\t- [RedemptionRequested(msg.sender,ref,units)](src/Platform.sol#L274)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 268,
+                  "endLine": 275
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "a2406958027579a4bc9c02d2164c23f05c8fa03c669824683961e6a5563b55fc"
+          }
+        },
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in IssuanceManager.issue(bytes32,address,uint256) (src/Platform.sol#252-257):\n\tExternal calls:\n\t- token.mint(investor,amount) (src/Platform.sol#255)\n\tEvent emitted after the call(s):\n\t- Issued(ref,investor,amount) (src/Platform.sol#256)\n",
+            "markdown": "Reentrancy in [IssuanceManager.issue(bytes32,address,uint256)](src/Platform.sol#L252-L257):\n\tExternal calls:\n\t- [token.mint(investor,amount)](src/Platform.sol#L255)\n\tEvent emitted after the call(s):\n\t- [Issued(ref,investor,amount)](src/Platform.sol#L256)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 252,
+                  "endLine": 257
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "d5a06a17d532354f4cecbf9716dd9259e798318a5ab6c4cabf169141f10d8a39"
+          }
+        },
+        {
+          "ruleId": "2-1-reentrancy-events",
+          "message": {
+            "text": "Reentrancy in IssuanceManager.rejectUnpaidRedemption(address,bytes32) (src/Platform.sol#293-299):\n\tExternal calls:\n\t- token.release(holder,request.units) (src/Platform.sol#297)\n\tEvent emitted after the call(s):\n\t- RedemptionCancelled(holder,ref) (src/Platform.sol#298)\n",
+            "markdown": "Reentrancy in [IssuanceManager.rejectUnpaidRedemption(address,bytes32)](src/Platform.sol#L293-L299):\n\tExternal calls:\n\t- [token.release(holder,request.units)](src/Platform.sol#L297)\n\tEvent emitted after the call(s):\n\t- [RedemptionCancelled(holder,ref)](src/Platform.sol#L298)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 293,
+                  "endLine": 299
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "ebe26cbd78ae98661cc0c2a1bc9a49de9195d15997e59c447eddb8c6db9c4eec"
+          }
+        },
+        {
+          "ruleId": "2-1-timestamp",
+          "message": {
+            "text": "IdentityRegistry.attest(address,uint16,uint64,bytes32) (src/Platform.sol#26-30) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0,invalid claim) (src/Platform.sol#27)\n",
+            "markdown": "[IdentityRegistry.attest(address,uint16,uint64,bytes32)](src/Platform.sol#L26-L30) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0,invalid claim)](src/Platform.sol#L27)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 26,
+                  "endLine": 30
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "1248183bd2eb53f706d7acb0f8422735eb1af6e7bb9670b18fce8344e6c388c7"
+          }
+        },
+        {
+          "ruleId": "2-1-timestamp",
+          "message": {
+            "text": "IdentityRegistry.verified(address) (src/Platform.sol#37-39) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- identities[wallet].expires > block.timestamp (src/Platform.sol#38)\n",
+            "markdown": "[IdentityRegistry.verified(address)](src/Platform.sol#L37-L39) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [identities[wallet].expires > block.timestamp](src/Platform.sol#L38)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 37,
+                  "endLine": 39
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "334129434ef6fc548f7d9b25d4b8b782e6d175a40a4c896481637c7a61b30fc2"
+          }
+        },
+        {
+          "ruleId": "2-1-timestamp",
+          "message": {
+            "text": "AssetRegistry.register(bytes32,bytes32,uint64,uint256,address) (src/Platform.sol#90-101) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0 && assets[id].token == address(0),invalid asset) (src/Platform.sol#94-98)\n",
+            "markdown": "[AssetRegistry.register(bytes32,bytes32,uint64,uint256,address)](src/Platform.sol#L90-L101) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0 && assets[id].token == address(0),invalid asset)](src/Platform.sol#L94-L98)\n"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Platform.sol"
+                },
+                "region": {
+                  "startLine": 90,
+                  "endLine": 101
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "id": "ab636dbb8fde6fbb896c79165d4add54ee383255ecba4517f573bf64df1bb5c5"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+accounts issuer=0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 reviewer=0x70997970c51812dc3a010c7d01b50e0d17dc79c8 holder=0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc holder2=0x90f79bf6eb2c4f870365e785982e1f101e93b906
+{"supply":"200","holder":"50","transactions":["0x6b92b37fbdc6229de3bd58f56aa8d08712624500cd61e923ef629ad989f2b8ea","0x255738dd13abbcd638abd1e6909fde510898832f03eac8c76f79c91892144594","0xe369387ecde0fe84b6d3e5a8606b697271ab0f6fbcbb32f980604f8e770bb67f","0x2b8b784f0b4991531d38e794e0ed6268474d555fb4ede16936d970b43574bce5","0x587890d44232b61a6f51feb7750ee60fb8a502462c21eaffaf7e3950ae2676d5","0x595ef5db2512a148e73493432f60af1f3f12b9848843a4716394ae8be11cbe14","0x46a566c34239defc41e1541ca04fa957f2474b00c846b34b06488decdce3e87e","0xf83530373a05686705e57ad832ac43a7d56da02380de6d405e6c789fc64d5962"]}
+PASS browser operations: dual issuance, transfer, reservation lock, settlement, replay rejection
+{
+  "matched": true,
+  "block": "12",
+  "blockHash": "0x011a0a81e01b326376582c0d3110dc91a2b850512bc009f2e4cf245ba26dec10",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 2,
+  "registerTotal": "200",
+  "chainSupply": "200",
+  "differences": []
+}
+PASS ops demo: browser ledger reconciled with onchain register

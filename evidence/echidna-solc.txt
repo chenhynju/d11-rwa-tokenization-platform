@@ -1,0 +1,22 @@
+[2026-11-05 22:20:52.64] Compiling `audit/LifecycleFuzz.sol`... Done! (11.753278926s)
+Analyzing contract: /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform/audit/LifecycleFuzz.sol:LifecycleFuzz
+[2026-11-05 22:21:04.47] Running slither on `audit/LifecycleFuzz.sol`... Done! (9.775983888s)
+[2026-11-05 22:21:14.53] [Worker 0] New coverage: 3049 instr, 5 contracts, 1 seqs in corpus
+[2026-11-05 22:21:15.96] [Worker 0] New coverage: 3053 instr, 5 contracts, 2 seqs in corpus
+[2026-11-05 22:21:17.85] [status] tests: 0/1, fuzzing: 2288/20000, values: [], cov: 3053, corpus: 2, gas/s: 69008748
+[2026-11-05 22:21:20.86] [status] tests: 0/1, fuzzing: 4900/20000, values: [], cov: 3053, corpus: 2, gas/s: 104935333
+[2026-11-05 22:21:23.86] [status] tests: 0/1, fuzzing: 6855/20000, values: [], cov: 3053, corpus: 2, gas/s: 78180885
+[2026-11-05 22:21:26.87] [status] tests: 0/1, fuzzing: 10208/20000, values: [], cov: 3053, corpus: 2, gas/s: 135056110
+[2026-11-05 22:21:29.87] [status] tests: 0/1, fuzzing: 13711/20000, values: [], cov: 3053, corpus: 2, gas/s: 140413953
+[2026-11-05 22:21:32.87] [status] tests: 0/1, fuzzing: 16934/20000, values: [], cov: 3053, corpus: 2, gas/s: 129940877
+[2026-11-05 22:21:35.87] [status] tests: 0/1, fuzzing: 19519/20000, values: [], cov: 3053, corpus: 2, gas/s: 103356925
+[2026-11-05 22:21:36.44] [Worker 0] Test limit reached. Stopping.
+[2026-11-05 22:21:36.44] [status] tests: 0/1, fuzzing: 20040/20000, values: [], cov: 3053, corpus: 2, gas/s: 63756072
+echidna_supply_accounting: passing
+
+Unique instructions: 3053
+Unique codehashes: 5
+Corpus size: 2
+Seed: 10
+Total calls: 20040
+

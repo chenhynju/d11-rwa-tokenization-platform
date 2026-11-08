@@ -1,0 +1,52 @@
+No files changed, compilation skipped
+
+Ran 35 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 141765)
+[PASS] testAssetRegistration() (gas: 150594)
+[PASS] testCannotRedeemAnotherHolder() (gas: 62642)
+[PASS] testCapExhaustion() (gas: 196183)
+[PASS] testCountryRejected() (gas: 81700)
+[PASS] testDistribution() (gas: 291095)
+[PASS] testDistributionBranches() (gas: 502673)
+[PASS] testDuplicateIssue() (gas: 34739)
+[PASS] testExpiredClaim() (gas: 32570)
+[PASS] testExpiredSender() (gas: 53562)
+[PASS] testFreeze() (gas: 93666)
+[PASS] testFrozenIssue() (gas: 114540)
+[PASS] testFrozenReceiver() (gas: 95746)
+[PASS] testFuzzConservation(uint96) (runs: 1024, μ: 105560, ~: 106008)
+[PASS] testHoldingLimit() (gas: 97788)
+[PASS] testInfiniteAllowance() (gas: 142936)
+[PASS] testInsufficientAllowance() (gas: 37222)
+[PASS] testInsufficientBalance() (gas: 44311)
+[PASS] testInvalidIdentity() (gas: 30934)
+[PASS] testManagerCannotRebind() (gas: 34861)
+[PASS] testPause() (gas: 70792)
+[PASS] testPausedIssue() (gas: 91951)
+[PASS] testRedeem() (gas: 87258)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 154432)
+[PASS] testRevocation() (gas: 87179)
+[PASS] testSelfTransfer() (gas: 59286)
+[PASS] testTransfer() (gas: 106195)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 84975)
+[PASS] testUnauthorizedIdentity() (gas: 34456)
+[PASS] testUnauthorizedIssue() (gas: 33416)
+[PASS] testUnauthorizedMint() (gas: 34595)
+[PASS] testUnknownRejected() (gas: 59480)
+[PASS] testZeroIssue() (gas: 63143)
+[PASS] testZeroLimit() (gas: 29795)
+[PASS] testZeroRecipient() (gas: 39851)
+Suite result: ok. 35 passed; 0 failed; 0 skipped; finished in 245.68ms (339.84ms CPU time)
+
+Ran 1 test for test/Invariant.t.sol:ConservationInvariant
+[PASS] invariantSupplyConservation() (runs: 128, calls: 8192, reverts: 0)
+
+╭-----------------+----------+-------+---------+----------╮
+| Contract        | Selector | Calls | Reverts | Discards |
++=========================================================+
+| TransferHandler | move     | 8192  | 0       | 0        |
+╰-----------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 8.25s (8.19s CPU time)
+
+Ran 2 test suites in 8.25s (8.49s CPU time): 36 tests passed, 0 failed, 0 skipped (36 total tests)

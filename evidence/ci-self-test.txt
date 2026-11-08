@@ -1,0 +1,59 @@
+No files changed, compilation skipped
+
+Ran 42 tests for test/Platform.t.sol:PlatformTest
+[PASS] testAllowance() (gas: 141787)
+[PASS] testApprovalAdminAndBoundaries() (gas: 506939)
+[PASS] testAssetRegistration() (gas: 150594)
+[PASS] testCancelledApproval() (gas: 157229)
+[PASS] testCannotRedeemAnotherHolder() (gas: 62791)
+[PASS] testCapExhaustion() (gas: 196249)
+[PASS] testConstructorBoundaries() (gas: 6513)
+[PASS] testCountryRejected() (gas: 81766)
+[PASS] testDistribution() (gas: 291116)
+[PASS] testDistributionBranches() (gas: 502673)
+[PASS] testDuplicateIssue() (gas: 34783)
+[PASS] testExpiredClaim() (gas: 32570)
+[PASS] testExpiredSender() (gas: 53716)
+[PASS] testFreeze() (gas: 93886)
+[PASS] testFrozenIssue() (gas: 114694)
+[PASS] testFrozenReceiver() (gas: 95922)
+[PASS] testFuzzConservation(uint96) (runs: 10000, μ: 105559, ~: 106074)
+[PASS] testHoldingLimit() (gas: 97810)
+[PASS] testIndependentApproval() (gas: 378786)
+[PASS] testInfiniteAllowance() (gas: 142958)
+[PASS] testInsufficientAllowance() (gas: 37222)
+[PASS] testInsufficientBalance() (gas: 44399)
+[PASS] testInvalidIdentity() (gas: 31022)
+[PASS] testManagerCannotRebind() (gas: 35015)
+[PASS] testPause() (gas: 70880)
+[PASS] testPausedIssue() (gas: 92061)
+[PASS] testRedeem() (gas: 87561)
+[PASS] testRedemptionCannotConsumeIssuanceReference() (gas: 281368)
+[PASS] testRejectedTransferKeepsAllowance() (gas: 154652)
+[PASS] testRevocation() (gas: 87267)
+[PASS] testSameApproverRejected() (gas: 6836)
+[PASS] testSelfTransfer() (gas: 59286)
+[PASS] testTransfer() (gas: 106327)
+[PASS] testUnauthorizedFreezePauseBurn() (gas: 85129)
+[PASS] testUnauthorizedIdentity() (gas: 34478)
+[PASS] testUnauthorizedIssue() (gas: 33592)
+[PASS] testUnauthorizedMint() (gas: 34661)
+[PASS] testUnauthorizedPause() (gas: 32228)
+[PASS] testUnknownRejected() (gas: 59502)
+[PASS] testZeroIssue() (gas: 63319)
+[PASS] testZeroLimit() (gas: 29817)
+[PASS] testZeroRecipient() (gas: 39939)
+Suite result: ok. 42 passed; 0 failed; 0 skipped; finished in 892.17ms (900.64ms CPU time)
+
+Ran 1 test for test/Invariant.t.sol:ConservationInvariant
+[PASS] invariantSupplyConservation() (runs: 512, calls: 131072, reverts: 0)
+
+╭-----------------+----------+--------+---------+----------╮
+| Contract        | Selector | Calls  | Reverts | Discards |
++==========================================================+
+| TransferHandler | move     | 131072 | 0       | 0        |
+╰-----------------+----------+--------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 46.26s (46.26s CPU time)
+
+Ran 2 test suites in 46.29s (47.16s CPU time): 43 tests passed, 0 failed, 0 skipped (43 total tests)

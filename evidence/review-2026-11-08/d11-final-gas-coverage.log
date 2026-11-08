@@ -1,0 +1,10 @@
+Diff in test/RedemptionSymbolic.t.sol:
+62  62   |     function check_SettlementReplay(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt, bytes32 other)
+63  63   |         public
+64  64   |     {
+65       |-        if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0 || other == 0 || other == receipt)
+66       |-        {
+    65   |+        if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0 || other == 0 || other == receipt) {
+67  66   |             return;
+68  67   |         }
+69  68   |         _request(ALICE, ref, units);

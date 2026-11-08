@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "compiler": "0.8.38",
+  "instrumentation": "non-IR coverage; production via-IR configuration remains unchanged",
+  "command": [
+    "forge",
+    "coverage",
+    "--fuzz-seed",
+    "0x20261108",
+    "--report",
+    "summary",
+    "--report",
+    "lcov"
+  ],
+  "metrics": [
+    {
+      "SF": "src/CorporateActions.sol",
+      "LF": "19",
+      "LH": "19",
+      "BRF": "8",
+      "BRH": "8"
+    },
+    {
+      "SF": "src/InstitutionalApproval.sol",
+      "LF": "33",
+      "LH": "33",
+      "BRF": "7",
+      "BRH": "7"
+    },
+    {
+      "SF": "src/Platform.sol",
+      "LF": "142",
+      "LH": "141",
+      "BRF": "38",
+      "BRH": "35"
+    }
+  ],
+  "sourceHashes": {
+    "src/CorporateActions.sol": "baf334fc53ac4b97763ef9d493b59a85a7313f0f1f8c5563f2bcee12b46bf387",
+    "src/Platform.sol": "c812eb71626d9e80aca1b56c4ea4085bbbcb44c392033f59e61237f0d0b66e82",
+    "src/InstitutionalApproval.sol": "fbca1d68fe5533484e9d55713006e53c6f71f73742460118d11d5c219b461b99"
+  }
+}

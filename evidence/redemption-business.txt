@@ -1,0 +1,41 @@
+PASS institutional deployment, issuer rejected, independent reviewer approved, holder balance 100
+{
+  "matched": true,
+  "block": "5",
+  "blockHash": "0x012c8ccc1d4fdb0c654f4e88ffb62f643e1ee511c27b6f40b2e167b22c049afb",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 1,
+  "registerTotal": "100",
+  "chainSupply": "100",
+  "differences": []
+}
+{
+  "matched": false,
+  "block": "5",
+  "blockHash": "0x012c8ccc1d4fdb0c654f4e88ffb62f643e1ee511c27b6f40b2e167b22c049afb",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 1,
+  "registerTotal": "99",
+  "chainSupply": "100",
+  "differences": [
+    {
+      "address": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+      "registerUnits": "99",
+      "chainUnits": "100"
+    }
+  ]
+}
+PASS synthetic register match and mismatch
+incorrect simulated payment amount
+{
+  "matched": true,
+  "block": "8",
+  "blockHash": "0xdad89dbe1558c666f544f6c255fe7aebaa3eb142d011de5adc3b57a2fd8991fa",
+  "token": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+  "holders": 1,
+  "registerTotal": "70",
+  "chainSupply": "70",
+  "differences": []
+}
+PASS synthetic redemption: receipt amount check, reviewer confirmation, replay rejection, final register reconciled
+PASS cross-request payment replay rejected and unpaid reservation released
