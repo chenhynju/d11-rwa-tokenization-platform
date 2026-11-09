@@ -154,3 +154,5 @@ Nothing here is an independent security audit or a certification.
 ## Hosted UI evidence
 
 [Protected Vercel deployment](https://d11-rwa-tokenization-platform-jgbftpkea-purelamp.vercel.app). Authenticated Chromium desktop and 390px mobile rendering passed with no page errors or horizontal overflow. [Evidence](evidence/hosted-ui-20261109/acceptance.json). This check does not establish hosted wallet transaction acceptance. Access protection remains enabled.
+
+[Engineering, self-review and public testnet evidence](docs/deployment/acceptance-2026-11-09.md)
