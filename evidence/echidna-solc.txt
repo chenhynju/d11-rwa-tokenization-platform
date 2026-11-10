@@ -1,20 +1,51 @@
-[2026-11-05 22:20:52.64] Compiling `audit/LifecycleFuzz.sol`... Done! (11.753278926s)
-Analyzing contract: /home/chenhy/workspace/web3-portfolio/rwa-tokenization-platform/audit/LifecycleFuzz.sol:LifecycleFuzz
-[2026-11-05 22:21:04.47] Running slither on `audit/LifecycleFuzz.sol`... Done! (9.775983888s)
-[2026-11-05 22:21:14.53] [Worker 0] New coverage: 3049 instr, 5 contracts, 1 seqs in corpus
-[2026-11-05 22:21:15.96] [Worker 0] New coverage: 3053 instr, 5 contracts, 2 seqs in corpus
-[2026-11-05 22:21:17.85] [status] tests: 0/1, fuzzing: 2288/20000, values: [], cov: 3053, corpus: 2, gas/s: 69008748
-[2026-11-05 22:21:20.86] [status] tests: 0/1, fuzzing: 4900/20000, values: [], cov: 3053, corpus: 2, gas/s: 104935333
-[2026-11-05 22:21:23.86] [status] tests: 0/1, fuzzing: 6855/20000, values: [], cov: 3053, corpus: 2, gas/s: 78180885
-[2026-11-05 22:21:26.87] [status] tests: 0/1, fuzzing: 10208/20000, values: [], cov: 3053, corpus: 2, gas/s: 135056110
-[2026-11-05 22:21:29.87] [status] tests: 0/1, fuzzing: 13711/20000, values: [], cov: 3053, corpus: 2, gas/s: 140413953
-[2026-11-05 22:21:32.87] [status] tests: 0/1, fuzzing: 16934/20000, values: [], cov: 3053, corpus: 2, gas/s: 129940877
-[2026-11-05 22:21:35.87] [status] tests: 0/1, fuzzing: 19519/20000, values: [], cov: 3053, corpus: 2, gas/s: 103356925
-[2026-11-05 22:21:36.44] [Worker 0] Test limit reached. Stopping.
-[2026-11-05 22:21:36.44] [status] tests: 0/1, fuzzing: 20040/20000, values: [], cov: 3053, corpus: 2, gas/s: 63756072
+[2026-11-10 08:39:24.27] Compiling `audit/LifecycleFuzz.sol`... Done! (2.378266289s)
+Analyzing contract: /home/chenhy/workspace/web3-portfolio/d11-rwa-tokenization-platform/audit/LifecycleFuzz.sol:LifecycleFuzz
+[2026-11-10 08:39:26.93] Running slither on `audit/LifecycleFuzz.sol`... Done! (9.241836381s)
+[2026-11-10 08:39:38.10] [Worker 0] New coverage: 3106 instr, 5 contracts, 1 seqs in corpus
+[2026-11-10 08:39:40.22] [Worker 0] New coverage: 3110 instr, 5 contracts, 2 seqs in corpus
+[2026-11-10 08:39:40.70] [status] tests: 0/1, fuzzing: 1313/20000, values: [], cov: 3110, corpus: 2, gas/s: 52897528
+[2026-11-10 08:39:43.70] [status] tests: 0/1, fuzzing: 3688/20000, values: [], cov: 3110, corpus: 2, gas/s: 95421201
+[2026-11-10 08:39:46.70] [status] tests: 0/1, fuzzing: 6112/20000, values: [], cov: 3110, corpus: 2, gas/s: 96805910
+[2026-11-10 08:39:49.71] [status] tests: 0/1, fuzzing: 7637/20000, values: [], cov: 3110, corpus: 2, gas/s: 61578608
+[2026-11-10 08:39:52.71] [status] tests: 0/1, fuzzing: 8142/20000, values: [], cov: 3110, corpus: 2, gas/s: 20259137
+[2026-11-10 08:39:55.71] [status] tests: 0/1, fuzzing: 8647/20000, values: [], cov: 3110, corpus: 2, gas/s: 20076828
+[2026-11-10 08:39:58.72] [status] tests: 0/1, fuzzing: 9134/20000, values: [], cov: 3110, corpus: 2, gas/s: 19543815
+[2026-11-10 08:40:01.72] [status] tests: 0/1, fuzzing: 9508/20000, values: [], cov: 3110, corpus: 2, gas/s: 15124947
+[2026-11-10 08:40:04.73] [status] tests: 0/1, fuzzing: 9905/20000, values: [], cov: 3110, corpus: 2, gas/s: 15864746
+[2026-11-10 08:40:07.73] [status] tests: 0/1, fuzzing: 10410/20000, values: [], cov: 3110, corpus: 2, gas/s: 20398703
+[2026-11-10 08:40:11.42] [status] tests: 0/1, fuzzing: 10814/20000, values: [], cov: 3110, corpus: 2, gas/s: 12150797
+[2026-11-10 08:40:14.43] [status] tests: 0/1, fuzzing: 11218/20000, values: [], cov: 3110, corpus: 2, gas/s: 16089851
+[2026-11-10 08:40:17.43] [status] tests: 0/1, fuzzing: 11521/20000, values: [], cov: 3110, corpus: 2, gas/s: 12037424
+[2026-11-10 08:40:20.44] [status] tests: 0/1, fuzzing: 11925/20000, values: [], cov: 3110, corpus: 2, gas/s: 16217762
+[2026-11-10 08:40:23.44] [status] tests: 0/1, fuzzing: 12196/20000, values: [], cov: 3110, corpus: 2, gas/s: 10798883
+[2026-11-10 08:40:26.44] [status] tests: 0/1, fuzzing: 12600/20000, values: [], cov: 3110, corpus: 2, gas/s: 16132601
+[2026-11-10 08:40:29.45] [status] tests: 0/1, fuzzing: 12903/20000, values: [], cov: 3110, corpus: 2, gas/s: 12109913
+[2026-11-10 08:40:32.45] [status] tests: 0/1, fuzzing: 13206/20000, values: [], cov: 3110, corpus: 2, gas/s: 12019926
+[2026-11-10 08:40:35.45] [status] tests: 0/1, fuzzing: 13610/20000, values: [], cov: 3110, corpus: 2, gas/s: 16497207
+[2026-11-10 08:40:38.46] [status] tests: 0/1, fuzzing: 14014/20000, values: [], cov: 3110, corpus: 2, gas/s: 16299352
+[2026-11-10 08:40:41.51] [status] tests: 0/1, fuzzing: 14418/20000, values: [], cov: 3110, corpus: 2, gas/s: 16411783
+[2026-11-10 08:40:45.27] [status] tests: 0/1, fuzzing: 14822/20000, values: [], cov: 3110, corpus: 2, gas/s: 12219787
+[2026-11-10 08:40:48.27] [status] tests: 0/1, fuzzing: 15190/20000, values: [], cov: 3110, corpus: 2, gas/s: 14748276
+[2026-11-10 08:40:51.28] [status] tests: 0/1, fuzzing: 15445/20000, values: [], cov: 3110, corpus: 2, gas/s: 10133552
+[2026-11-10 08:40:54.28] [status] tests: 0/1, fuzzing: 15849/20000, values: [], cov: 3110, corpus: 2, gas/s: 16321150
+[2026-11-10 08:40:57.34] [status] tests: 0/1, fuzzing: 16152/20000, values: [], cov: 3110, corpus: 2, gas/s: 12059637
+[2026-11-10 08:41:00.35] [status] tests: 0/1, fuzzing: 16455/20000, values: [], cov: 3110, corpus: 2, gas/s: 12161973
+[2026-11-10 08:41:03.35] [status] tests: 0/1, fuzzing: 16758/20000, values: [], cov: 3110, corpus: 2, gas/s: 12255774
+[2026-11-10 08:41:06.35] [status] tests: 0/1, fuzzing: 17035/20000, values: [], cov: 3110, corpus: 2, gas/s: 11190339
+[2026-11-10 08:41:09.36] [status] tests: 0/1, fuzzing: 17382/20000, values: [], cov: 3110, corpus: 2, gas/s: 13840250
+[2026-11-10 08:41:12.36] [status] tests: 0/1, fuzzing: 17626/20000, values: [], cov: 3110, corpus: 2, gas/s: 9824534
+[2026-11-10 08:41:16.21] [status] tests: 0/1, fuzzing: 18030/20000, values: [], cov: 3110, corpus: 2, gas/s: 12166213
+[2026-11-10 08:41:19.22] [status] tests: 0/1, fuzzing: 18333/20000, values: [], cov: 3110, corpus: 2, gas/s: 12057361
+[2026-11-10 08:41:22.22] [status] tests: 0/1, fuzzing: 18636/20000, values: [], cov: 3110, corpus: 2, gas/s: 12037409
+[2026-11-10 08:41:25.22] [status] tests: 0/1, fuzzing: 19014/20000, values: [], cov: 3110, corpus: 2, gas/s: 15011883
+[2026-11-10 08:41:28.22] [status] tests: 0/1, fuzzing: 19317/20000, values: [], cov: 3110, corpus: 2, gas/s: 11998762
+[2026-11-10 08:41:31.23] [status] tests: 0/1, fuzzing: 19620/20000, values: [], cov: 3110, corpus: 2, gas/s: 12316042
+[2026-11-10 08:41:34.23] [status] tests: 0/1, fuzzing: 19939/20000, values: [], cov: 3110, corpus: 2, gas/s: 12809878
+[2026-11-10 08:41:34.51] [Worker 0] Test limit reached. Stopping.
+[2026-11-10 08:41:34.51] [status] tests: 0/1, fuzzing: 20040/20000, values: [], cov: 3110, corpus: 2, gas/s: 0
 echidna_supply_accounting: passing
 
-Unique instructions: 3053
+Unique instructions: 3110
 Unique codehashes: 5
 Corpus size: 2
 Seed: 10
