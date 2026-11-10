@@ -10,7 +10,7 @@ are involved.
 
 ## Quick start
 
-Use Ubuntu-24.04 WSL with Foundry 1.8.1 and solc 0.8.24 (both pinned).
+Use Ubuntu-24.04 WSL with Foundry 1.8.1 and solc 0.8.38 (both pinned).
 
 ```bash
 forge test                              # 48 checks: 46 unit/fuzz + 2 invariant suites

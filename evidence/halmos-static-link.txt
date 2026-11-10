@@ -7,6 +7,14 @@ note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." a
   │
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+  ╭▸ src/Platform.sol:5:30
+  │
+5 │     address public immutable owner;
+  │                              ━━━━━ help: consider using: `OWNER`
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
 note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
   ╭▸ test/Platform.t.sol:3:8
   │
@@ -14,6 +22,30 @@ note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." a
   │        ━━━━━━━━━━━━━━━━━━━━━
   │
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
+
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ test/RedemptionSymbolic.t.sol:3:8
+  │
+3 │ import "../src/Platform.sol";
+  │        ━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
+
+note[interface-naming]: interface names should be prefixed with 'I'
+  ╭▸ test/RedemptionSymbolic.t.sol:5:11
+  │
+5 │ interface SymVm {
+  │           ━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
+
+note[low-level-calls]: Low-level calls should be avoided
+   ╭▸ test/RedemptionSymbolic.t.sol:15:17
+   │
+15 │         (ok,) = address(m).call(abi.encodeCall(IssuanceManager.confirmRedemption, (holder, ref, payment, receipt)));
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
 
 note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
   ╭▸ script/DeploySepolia.s.sol:3:8
@@ -24,52 +56,12 @@ note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." a
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
 note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ script/DeploySepolia.s.sol:4:8
-  │
-4 │ import "../src/CorporateActions.sol";
-  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ script/DeploySepolia.s.sol:6:8
-  │
-6 │ import "../src/InstitutionalApproval.sol";
-  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[interface-naming]: interface names should be prefixed with 'I'
-  ╭▸ script/DeploySepolia.s.sol:8:11
-  │
-8 │ interface ScriptVm {
-  │           ━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
-
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
   ╭▸ script/Deploy.s.sol:3:8
   │
 3 │ import "../src/Platform.sol";
   │        ━━━━━━━━━━━━━━━━━━━━━
   │
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ src/InstitutionalApproval.sol:3:8
-  │
-3 │ import "./Platform.sol";
-  │        ━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-   ╭▸ src/InstitutionalApproval.sol:13:30
-   │
-13 │     address public immutable reviewer;
-   │                              ━━━━━━━━ help: consider using: `REVIEWER`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
 
 note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
   ╭▸ script/Deploy.s.sol:4:8
@@ -79,35 +71,19 @@ note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." a
   │
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ script/Deploy.s.sol:6:8
-  │
-6 │ import "../src/InstitutionalApproval.sol";
-  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ test/RedemptionInvariant.t.sol:3:8
-  │
-3 │ import "../src/Platform.sol";
-  │        ━━━━━━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[interface-naming]: interface names should be prefixed with 'I'
-  ╭▸ test/RedemptionInvariant.t.sol:5:11
-  │
-5 │ interface RedemptionVm {
-  │           ━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/Platform.sol:27:9
+   │
+27 │         require(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0, "invalid claim");
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
 note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-   ╭▸ test/RedemptionInvariant.t.sol:11:27
+   ╭▸ test/RedemptionSymbolic.t.sol:23:20
    │
-11 │     RedemptionVm constant vm = RedemptionVm(address(uint160(uint256(keccak256("hevm cheat code")))));
-   │                           ━━ help: consider using: `VM`
+23 │     SymVm constant vm = SymVm(address(uint160(uint256(keccak256("hevm cheat code")))));
+   │                    ━━ help: consider using: `VM`
    │
    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
 
@@ -127,59 +103,94 @@ note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." a
   │
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/CorporateActions.sol:22:9
+   │
+22 │         require(id != 0 && reconciliationHash != 0 && budget > 0 && distributions[id].budget == 0);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/CorporateActions.sol:29:9
+   │
+29 │ ┏         require(
+30 │ ┃             d.budget > 0 && !d.closed && investor != address(0) && amount > 0 && entitlement[id][investor] == 0
+31 │ ┃                 && amount <= d.budget - d.allocated
+32 │ ┃         );
+   │ ┗━━━━━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
 note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ test/Invariant.t.sol:3:8
+  ╭▸ test/RedemptionInvariant.t.sol:3:8
   │
 3 │ import "../src/Platform.sol";
   │        ━━━━━━━━━━━━━━━━━━━━━
   │
   ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
-note[interface-naming]: interface names should be prefixed with 'I'
-  ╭▸ script/Deploy.s.sol:8:11
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ script/Deploy.s.sol:6:8
   │
-8 │ interface ScriptVm {
-  │           ━━━━━━━━
+6 │ import "../src/InstitutionalApproval.sol";
+  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
+
+note[interface-naming]: interface names should be prefixed with 'I'
+  ╭▸ test/Platform.t.sol:7:11
+  │
+7 │ interface Vm {
+  │           ━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
+
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ script/DeploySepolia.s.sol:4:8
+  │
+4 │ import "../src/CorporateActions.sol";
+  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
+
+note[mixed-case-function]: function names should use mixedCase
+   ╭▸ test/RedemptionSymbolic.t.sol:48:14
+   │
+48 │     function check_SettlementAccounting(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt) public {
+   │              ━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkSettlementAccounting`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/CorporateActions.sol:40:9
+   │
+40 │         require(d.budget > 0 && !d.closed && d.allocated == d.budget);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[interface-naming]: interface names should be prefixed with 'I'
+  ╭▸ test/RedemptionInvariant.t.sol:5:11
+  │
+5 │ interface RedemptionVm {
+  │           ━━━━━━━━━━━━
   │
   ╰ help: https://getfoundry.sh/forge/linting/interface-naming
 
 note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-   ╭▸ src/InstitutionalApproval.sol:14:38
+   ╭▸ src/Platform.sol:47:39
    │
-14 │     IssuanceManager public immutable manager;
-   │                                      ━━━━━━━ help: consider using: `MANAGER`
+47 │     IdentityRegistry public immutable identities;
+   │                                       ━━━━━━━━━━ help: consider using: `IDENTITIES`
    │
    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
 
 note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-   ╭▸ script/DeploySepolia.s.sol:15:23
+   ╭▸ test/RedemptionInvariant.t.sol:11:27
    │
-15 │     ScriptVm constant vm = ScriptVm(address(uint160(uint256(keccak256("hevm cheat code")))));
-   │                       ━━ help: consider using: `VM`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
-
-note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-   ╭▸ test/Invariant.t.sol:10:26
-   │
-10 │     InvariantVm constant vm = InvariantVm(address(uint160(uint256(keccak256("hevm cheat code")))));
-   │                          ━━ help: consider using: `VM`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
-
-note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-  ╭▸ src/Platform.sol:5:30
-  │
-5 │     address public immutable owner;
-  │                              ━━━━━ help: consider using: `OWNER`
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
-
-note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-   ╭▸ script/Deploy.s.sol:15:23
-   │
-15 │     ScriptVm constant vm = ScriptVm(address(uint160(uint256(keccak256("hevm cheat code")))));
-   │                       ━━ help: consider using: `VM`
+11 │     RedemptionVm constant vm = RedemptionVm(address(uint160(uint256(keccak256("hevm cheat code")))));
+   │                           ━━ help: consider using: `VM`
    │
    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
 
@@ -199,157 +210,13 @@ note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
    │
    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
 
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ test/Invariant.t.sol:5:11
-  │
-5 │ interface InvariantVm {
-  │           ━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/Platform.sol:27:9
+note[mixed-case-function]: function names should use mixedCase
+   ╭▸ test/RedemptionSymbolic.t.sol:62:14
    │
-27 │         require(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0, "invalid claim");
-   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+62 │     function check_SettlementReplay(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt, bytes32 other)
+   │              ━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkSettlementReplay`
    │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-   ╭▸ src/Platform.sol:47:39
-   │
-47 │     IdentityRegistry public immutable identities;
-   │                                       ━━━━━━━━━━ help: consider using: `IDENTITIES`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ script/DeploySepolia.s.sol:8:11
-  │
-8 │ interface ScriptVm {
-  │           ━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ script/DeploySepolia.s.sol:14:10
-   │
-14 │ contract DeploySepolia {
-   │          ━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[interface-naming]: interface names should be prefixed with 'I'
-  ╭▸ test/Platform.t.sol:7:11
-  │
-7 │ interface Vm {
-  │           ━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/Platform.sol:53:9
-   │
-53 │         require(limit > 0);
-   │         ━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ test/Invariant.t.sol:9:10
-  │
-9 │ contract TransferHandler {
-  │          ━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ test/RedemptionInvariant.t.sol:5:11
-  │
-5 │ interface RedemptionVm {
-  │           ━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ script/DeploySepolia.s.sol:27:64
-   │
-27 │         PermissionedToken token = new PermissionedToken(rules, 10000);
-   │                                                                ━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/CorporateActions.sol:22:9
-   │
-22 │         require(id != 0 && reconciliationHash != 0 && budget > 0 && distributions[id].budget == 0);
-   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ script/Deploy.s.sol:8:11
-  │
-8 │ interface ScriptVm {
-  │           ━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ script/Deploy.s.sol:14:10
-   │
-14 │ contract Deploy {
-   │          ━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[named-struct-fields]: prefer initializing structs with named fields
-   ╭▸ src/InstitutionalApproval.sol:31:25
-   │
-31 │         requests[ref] = Request(investor, amount, false, false);
-   │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Request({ investor: investor, amount: amount, executed: false, cancelled: false })`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ script/DeploySepolia.s.sol:37:13
-   │
-37 │             10000,
-   │             ━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-   ╭▸ src/InstitutionalApproval.sol:48:9
-   │
-48 │         emit Executed(ref, msg.sender);
-   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/Platform.sol:64:9
-   │
-64 │         require(limit > 0);
-   │         ━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ test/RedemptionSymbolic.t.sol:3:8
-  │
-3 │ import "../src/Platform.sol";
-  │        ━━━━━━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
-
-note[interface-naming]: interface names should be prefixed with 'I'
-  ╭▸ test/RedemptionSymbolic.t.sol:5:11
-  │
-5 │ interface SymVm {
-  │           ━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
 
 note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
    ╭▸ test/Platform.t.sol:15:17
@@ -359,45 +226,53 @@ note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
    │
    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
 
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ test/RedemptionInvariant.t.sol:10:10
-   │
-10 │ contract RedemptionHandler {
-   │          ━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+note[interface-naming]: interface names should be prefixed with 'I'
+  ╭▸ script/Deploy.s.sol:8:11
+  │
+8 │ interface ScriptVm {
+  │           ━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
 
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-    ╭▸ test/RedemptionInvariant.t.sol:112:10
-    │
-112 │ contract RedemptionInvariant {
-    │          ━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
+   ╭▸ script/Deploy.s.sol:15:23
+   │
+15 │     ScriptVm constant vm = ScriptVm(address(uint160(uint256(keccak256("hevm cheat code")))));
+   │                       ━━ help: consider using: `VM`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
+
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ src/InstitutionalApproval.sol:3:8
+  │
+3 │ import "./Platform.sol";
+  │        ━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
 note[low-level-calls]: Low-level calls should be avoided
-   ╭▸ test/RedemptionSymbolic.t.sol:15:17
+   ╭▸ test/RedemptionSymbolic.t.sol:72:13
    │
-15 │         (ok,) = address(m).call(abi.encodeCall(IssuanceManager.confirmRedemption, (holder, ref, payment, receipt)));
-   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+72 │             address(manager).call(abi.encodeCall(IssuanceManager.confirmRedemption, (ALICE, ref, payment, receipt)));
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
 
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionInvariant.t.sol:29:26
-   │
-29 │         rules.setCountry(840, true);
-   │                          ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ script/DeploySepolia.s.sol:6:8
+  │
+6 │ import "../src/InstitutionalApproval.sol";
+  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionInvariant.t.sol:34:36
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/CorporateActions.sol:46:9
    │
-34 │             ids.attest(parties[i], 840, type(uint64).max, bytes32(uint256(i + 1)));
-   │                                    ━━━
+46 │         require(distributions[id].closed && entitlement[id][msg.sender] > 0 && !acknowledged[id][msg.sender]);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
 note[multi-contract-file]: prefer having only one contract, interface or library per file
   ╭▸ test/Platform.t.sol:7:11
@@ -408,169 +283,20 @@ note[multi-contract-file]: prefer having only one contract, interface or library
   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
 
 note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ test/Invariant.t.sol:28:10
-   │
-28 │ contract ConservationInvariant {
-   │          ━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+  ╭▸ script/Deploy.s.sol:8:11
+  │
+8 │ interface ScriptVm {
+  │           ━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
 
-warning[uninitialized-local]: local variable is read before being initialized
-   ╭▸ test/RedemptionInvariant.t.sol:33:25
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/InstitutionalApproval.sol:13:30
    │
-33 │         for (uint256 i; i < parties.length; ++i) {
-   │                         ━
+13 │     address public immutable reviewer;
+   │                              ━━━━━━━━ help: consider using: `REVIEWER`
    │
-   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ script/Deploy.s.sol:23:64
-   │
-23 │         PermissionedToken token = new PermissionedToken(rules, 10000);
-   │                                                                ━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ test/Platform.t.sol:14:10
-   │
-14 │ contract PlatformTest {
-   │          ━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-warning[unsafe-typecast]: typecasts that can truncate values should be checked
-   ╭▸ script/DeploySepolia.s.sol:36:13
-   │
-36 │             uint64(block.timestamp + 365 days),
-   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ├ note: consider disabling this lint if you're certain the cast is safe
-   │       
-   │       // casting to 'uint64' is safe because [explain why]
-   │       // forge-lint: disable-next-line(unsafe-typecast)
-   │       
-   │       
-   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
-
-warning[calls-loop]: external call inside a loop
-   ╭▸ test/RedemptionInvariant.t.sol:34:13
-   │
-34 │             ids.attest(parties[i], 840, type(uint64).max, bytes32(uint256(i + 1)));
-   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
-
-warning[calls-loop]: external call inside a loop
-   ╭▸ test/RedemptionInvariant.t.sol:36:13
-   │
-36 │             m.issue(ref, parties[i], each);
-   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ script/Deploy.s.sol:33:13
-   │
-33 │             10000,
-   │             ━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/Platform.sol:94:9
-   │
-94 │ ┏         require(
-95 │ ┃             id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0
-96 │ ┃                 && assets[id].token == address(0),
-97 │ ┃             "invalid asset"
-98 │ ┃         );
-   │ ┗━━━━━━━━━┛
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/CorporateActions.sol:29:9
-   │
-29 │ ┏         require(
-30 │ ┃             d.budget > 0 && !d.closed && investor != address(0) && amount > 0 && entitlement[id][investor] == 0
-31 │ ┃                 && amount <= d.budget - d.allocated
-32 │ ┃         );
-   │ ┗━━━━━━━━━┛
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-   ╭▸ test/RedemptionSymbolic.t.sol:23:20
-   │
-23 │     SymVm constant vm = SymVm(address(uint160(uint256(keccak256("hevm cheat code")))));
-   │                    ━━ help: consider using: `VM`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
-
-note[mixed-case-function]: function names should use mixedCase
-   ╭▸ test/RedemptionSymbolic.t.sol:48:14
-   │
-48 │     function check_SettlementAccounting(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt) public {
-   │              ━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkSettlementAccounting`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
-
-note[mixed-case-function]: function names should use mixedCase
-   ╭▸ test/RedemptionSymbolic.t.sol:62:14
-   │
-62 │     function check_SettlementReplay(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt, bytes32 other)
-   │              ━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkSettlementReplay`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
-
-note[low-level-calls]: Low-level calls should be avoided
-   ╭▸ test/RedemptionSymbolic.t.sol:72:13
-   │
-72 │             address(manager).call(abi.encodeCall(IssuanceManager.confirmRedemption, (ALICE, ref, payment, receipt)));
-   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/CorporateActions.sol:40:9
-   │
-40 │         require(d.budget > 0 && !d.closed && d.allocated == d.budget);
-   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-   ╭▸ src/CorporateActions.sol:46:9
-   │
-46 │         require(distributions[id].closed && entitlement[id][msg.sender] > 0 && !acknowledged[id][msg.sender]);
-   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-warning[uninitialized-local]: local variable is read before being initialized
-    ╭▸ test/RedemptionInvariant.t.sol:140:13
-    │
-140 │             sumReserved += reserved;
-    │             ━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
-
-warning[uninitialized-local]: local variable is read before being initialized
-    ╭▸ test/RedemptionInvariant.t.sol:141:13
-    │
-141 │             sumBalances += balance;
-    │             ━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
-
-warning[uninitialized-local]: local variable is read before being initialized
-    ╭▸ test/RedemptionInvariant.t.sol:136:25
-    │
-136 │         for (uint256 i; i < parties.length; ++i) {
-    │                         ━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
 
 warning[missing-events-access-control]: `distributions` is changed without an event but is used for access control
    ╭▸ src/CorporateActions.sol:33:9
@@ -596,6 +322,86 @@ note[low-level-calls]: Low-level calls should be avoided
    │
    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
 
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ test/RedemptionInvariant.t.sol:5:11
+  │
+5 │ interface RedemptionVm {
+  │           ━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/RedemptionInvariant.t.sol:10:10
+   │
+10 │ contract RedemptionHandler {
+   │          ━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/Platform.sol:53:9
+   │
+53 │         require(limit > 0);
+   │         ━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/Platform.sol:64:9
+   │
+64 │         require(limit > 0);
+   │         ━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/Platform.t.sol:14:10
+   │
+14 │ contract PlatformTest {
+   │          ━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/InstitutionalApproval.sol:14:38
+   │
+14 │     IssuanceManager public immutable manager;
+   │                                      ━━━━━━━ help: consider using: `MANAGER`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+    ╭▸ test/RedemptionInvariant.t.sol:112:10
+    │
+112 │ contract RedemptionInvariant {
+    │          ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[mixed-case-function]: function names should use mixedCase
+   ╭▸ test/RedemptionSymbolic.t.sol:84:14
+   │
+84 │     function check_PaymentReplayAcrossHolders(
+   │              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkPaymentReplayAcrossHolders`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionInvariant.t.sol:29:26
+   │
+29 │         rules.setCountry(840, true);
+   │                          ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionInvariant.t.sol:34:36
+   │
+34 │             ids.attest(parties[i], 840, type(uint64).max, bytes32(uint256(i + 1)));
+   │                                    ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Platform.t.sol:26:46
    │
@@ -603,6 +409,186 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    │                                              ━━━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[interface-naming]: interface names should be prefixed with 'I'
+  ╭▸ script/DeploySepolia.s.sol:8:11
+  │
+8 │ interface ScriptVm {
+  │           ━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/interface-naming
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ src/CorporateActions.sol:23:29
+   │
+23 │         distributions[id] = Distribution(reconciliationHash, budget, 0, false);
+   │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Distribution({ reconciliationHash: reconciliationHash, budget: budget, allocated: 0, closed: false })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ script/Deploy.s.sol:14:10
+   │
+14 │ contract Deploy {
+   │          ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ script/Deploy.s.sol:23:64
+   │
+23 │         PermissionedToken token = new PermissionedToken(rules, 10000);
+   │                                                                ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ script/Deploy.s.sol:33:13
+   │
+33 │             10000,
+   │             ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ test/RedemptionInvariant.t.sol:33:25
+   │
+33 │         for (uint256 i; i < parties.length; ++i) {
+   │                         ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ src/InstitutionalApproval.sol:31:25
+   │
+31 │         requests[ref] = Request(investor, amount, false, false);
+   │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Request({ investor: investor, amount: amount, executed: false, cancelled: false })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[low-level-calls]: Low-level calls should be avoided
+    ╭▸ test/RedemptionSymbolic.t.sol:104:13
+    │
+104 │             address(manager).call(abi.encodeCall(IssuanceManager.confirmRedemption, (BOB, refB, payment, receiptB)));
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
+   ╭▸ script/DeploySepolia.s.sol:15:23
+   │
+15 │     ScriptVm constant vm = ScriptVm(address(uint160(uint256(keccak256("hevm cheat code")))));
+   │                       ━━ help: consider using: `VM`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+   ╭▸ src/Platform.sol:94:9
+   │
+94 │ ┏         require(
+95 │ ┃             id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0
+96 │ ┃                 && assets[id].token == address(0),
+97 │ ┃             "invalid asset"
+98 │ ┃         );
+   │ ┗━━━━━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ test/Invariant.t.sol:3:8
+  │
+3 │ import "../src/Platform.sol";
+  │        ━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
+
+note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
+   ╭▸ test/Invariant.t.sol:10:26
+   │
+10 │     InvariantVm constant vm = InvariantVm(address(uint160(uint256(keccak256("hevm cheat code")))));
+   │                          ━━ help: consider using: `VM`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ test/Invariant.t.sol:5:11
+  │
+5 │ interface InvariantVm {
+  │           ━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ script/DeploySepolia.s.sol:8:11
+  │
+8 │ interface ScriptVm {
+  │           ━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ script/DeploySepolia.s.sol:14:10
+   │
+14 │ contract DeploySepolia {
+   │          ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
+    ╭▸ src/Platform.sol:105:28
+    │
+105 │     string public constant name = "Simulated Bond Units";
+    │                            ━━━━ help: consider using: `NAME`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
+
+note[mixed-case-function]: function names should use mixedCase
+    ╭▸ test/RedemptionSymbolic.t.sol:112:14
+    │
+112 │     function check_UnauthorizedConfirm(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt) public {
+    │              ━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkUnauthorizedConfirm`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ test/RedemptionSymbolic.t.sol:5:11
+  │
+5 │ interface SymVm {
+  │           ━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/InstitutionalApproval.sol:48:9
+   │
+48 │         emit Executed(ref, msg.sender);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ test/Invariant.t.sol:9:10
+  │
+9 │ contract TransferHandler {
+  │          ━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/Invariant.t.sol:28:10
+   │
+28 │ contract ConservationInvariant {
+   │          ━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
+    ╭▸ src/Platform.sol:106:28
+    │
+106 │     string public constant symbol = "SBOND";
+    │                            ━━━━━━ help: consider using: `SYMBOL`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Platform.t.sol:29:26
@@ -634,45 +620,37 @@ warning[unsafe-typecast]: typecasts that can truncate values should be checked
    │       
    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
 
-note[mixed-case-function]: function names should use mixedCase
-   ╭▸ test/RedemptionSymbolic.t.sol:84:14
-   │
-84 │     function check_PaymentReplayAcrossHolders(
-   │              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkPaymentReplayAcrossHolders`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
+    ╭▸ src/Platform.sol:107:27
+    │
+107 │     uint8 public constant decimals = 0;
+    │                           ━━━━━━━━ help: consider using: `DECIMALS`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
 
-note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
-  ╭▸ test/ApprovalSymbolic.t.sol:3:8
-  │
-3 │ import "../src/InstitutionalApproval.sol";
-  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+    ╭▸ src/Platform.sol:109:30
+    │
+109 │     uint256 public immutable cap;
+    │                              ━━━ help: consider using: `CAP`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
 
-note[mixed-case-function]: function names should use mixedCase
-   ╭▸ test/ApprovalSymbolic.t.sol:19:14
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ script/DeploySepolia.s.sol:27:64
    │
-19 │     function check_IssuerCannotExecute(bytes32 ref, uint256 units) public {
-   │              ━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkIssuerCannotExecute`
+27 │         PermissionedToken token = new PermissionedToken(rules, 10000);
+   │                                                                ━━━━━
    │
-   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[low-level-calls]: Low-level calls should be avoided
-   ╭▸ test/ApprovalSymbolic.t.sol:22:27
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/RedemptionSymbolic.t.sol:10:10
    │
-22 │         (bool success,) = address(approval).call(abi.encodeCall(approval.execute, (ref)));
-   │                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10 │ contract Stranger {
+   │          ━━━━━━━━
    │
-   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
-
-note[named-struct-fields]: prefer initializing structs with named fields
-   ╭▸ src/CorporateActions.sol:23:29
-   │
-23 │         distributions[id] = Distribution(reconciliationHash, budget, 0, false);
-   │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Distribution({ reconciliationHash: reconciliationHash, budget: budget, allocated: 0, closed: false })`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
 
 warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
    ╭▸ test/Invariant.t.sol:24:9
@@ -681,6 +659,14 @@ warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls sho
    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/erc20-unchecked-transfer
+
+note[unaliased-plain-import]: use named imports '{A, B}' or alias 'import ".." as X'
+  ╭▸ test/ApprovalSymbolic.t.sol:3:8
+  │
+3 │ import "../src/InstitutionalApproval.sol";
+  │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unaliased-plain-import
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Platform.t.sol:30:57
@@ -698,6 +684,54 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+    ╭▸ src/Platform.sol:110:39
+    │
+110 │     ComplianceEngine public immutable compliance;
+    │                                       ━━━━━━━━━━ help: consider using: `COMPLIANCE`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+warning[calls-loop]: external call inside a loop
+   ╭▸ test/RedemptionInvariant.t.sol:34:13
+   │
+34 │             ids.attest(parties[i], 840, type(uint64).max, bytes32(uint256(i + 1)));
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/RedemptionSymbolic.t.sol:22:10
+   │
+22 │ contract RedemptionSymbolic {
+   │          ━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[mixed-case-function]: function names should use mixedCase
+   ╭▸ test/ApprovalSymbolic.t.sol:19:14
+   │
+19 │     function check_IssuerCannotExecute(bytes32 ref, uint256 units) public {
+   │              ━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkIssuerCannotExecute`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+
+note[low-level-calls]: Low-level calls should be avoided
+   ╭▸ test/ApprovalSymbolic.t.sol:22:27
+   │
+22 │         (bool success,) = address(approval).call(abi.encodeCall(approval.execute, (ref)));
+   │                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+warning[calls-loop]: external call inside a loop
+   ╭▸ test/RedemptionInvariant.t.sol:36:13
+   │
+36 │             m.issue(ref, parties[i], each);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Platform.t.sol:31:55
    │
@@ -706,61 +740,37 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-warning[calls-loop]: external call inside a loop
-    ╭▸ test/RedemptionInvariant.t.sol:137:32
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:126:9
     │
-137 │             uint256 reserved = token.reserved(parties[i]);
-    │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━
+126 │         require(supplyCap > 0);
+    │         ━━━━━━━━━━━━━━━━━━━━━━
     │
-    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
-warning[calls-loop]: external call inside a loop
-    ╭▸ test/RedemptionInvariant.t.sol:138:31
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:131:9
     │
-138 │             uint256 balance = token.balanceOf(parties[i]);
-    │                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+131 │         require(msg.sender == manager, "manager only");
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     │
-    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
-
-note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-    ╭▸ src/Platform.sol:105:28
-    │
-105 │     string public constant name = "Simulated Bond Units";
-    │                            ━━━━ help: consider using: `NAME`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
-
-note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-    ╭▸ src/Platform.sol:106:28
-    │
-106 │     string public constant symbol = "SBOND";
-    │                            ━━━━━━ help: consider using: `SYMBOL`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
-
-note[screaming-snake-case-const]: constants should use SCREAMING_SNAKE_CASE
-    ╭▸ src/Platform.sol:107:27
-    │
-107 │     uint8 public constant decimals = 0;
-    │                           ━━━━━━━━ help: consider using: `DECIMALS`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-const
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Invariant.t.sol:39:26
+   ╭▸ test/RedemptionSymbolic.t.sol:35:26
    │
-39 │         rules.setCountry(840, true);
+35 │         rules.setCountry(840, true);
    │                          ━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[low-level-calls]: Low-level calls should be avoided
-    ╭▸ test/RedemptionSymbolic.t.sol:104:13
-    │
-104 │             address(manager).call(abi.encodeCall(IssuanceManager.confirmRedemption, (BOB, refB, payment, receiptB)));
-    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:36:34
+   │
+36 │         identities.attest(ALICE, 840, type(uint64).max, bytes32(uint256(1)));
+   │                                  ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/ApprovalSymbolic.t.sol:11:67
@@ -771,92 +781,36 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ script/DeploySepolia.s.sol:37:13
+   │
+37 │             10000,
+   │             ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:136:9
+    │
+136 │         require(manager == address(0) && target.code.length > 0);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/RedemptionInvariant.t.sol:141:13
+    │
+141 │             sumBalances += balance;
+    │             ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/ApprovalSymbolic.t.sol:15:35
    │
 15 │         identities.attest(address(3), 840, type(uint64).max, bytes32(uint256(1)));
    │                                   ━
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Invariant.t.sol:40:28
-   │
-40 │         ids.attest(address(0xA11CE), 840, type(uint64).max, bytes32(uint256(1)));
-   │                            ━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[require-revert-in-loop]: `require` or `revert` inside a loop
-    ╭▸ test/RedemptionInvariant.t.sol:139:13
-    │
-139 │             require(reserved <= balance);
-    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:32:51
-   │
-32 │         manager.issue(bytes32(uint256(1)), alice, 500);
-   │                                                   ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:37:29
-   │
-37 │         token.transfer(bob, 200);
-   │                             ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:38:41
-   │
-38 │         require(token.balanceOf(bob) == 200 && token.balanceOf(alice) == 300 && token.totalSupply() == 500);
-   │                                         ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Invariant.t.sol:40:38
-   │
-40 │         ids.attest(address(0xA11CE), 840, type(uint64).max, bytes32(uint256(1)));
-   │                                      ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Invariant.t.sol:41:28
-   │
-41 │         ids.attest(address(0xB0B), 840, type(uint64).max, bytes32(uint256(2)));
-   │                            ━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-    ╭▸ src/Platform.sol:109:30
-    │
-109 │     uint256 public immutable cap;
-    │                              ━━━ help: consider using: `CAP`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
-
-note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-    ╭▸ src/Platform.sol:110:39
-    │
-110 │     ComplianceEngine public immutable compliance;
-    │                                       ━━━━━━━━━━ help: consider using: `COMPLIANCE`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:126:9
-    │
-126 │         require(supplyCap > 0);
-    │         ━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/ApprovalSymbolic.t.sol:15:39
@@ -882,109 +836,19 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/ApprovalSymbolic.t.sol:21:39
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ script/DeploySepolia.s.sol:36:13
    │
-21 │         approval.propose(ref, address(3), units);
-   │                                       ━
+36 │             uint64(block.timestamp + 365 days),
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:131:9
-    │
-131 │         require(msg.sender == manager, "manager only");
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:136:9
-    │
-136 │         require(manager == address(0) && target.code.length > 0);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:38:74
-   │
-38 │         require(token.balanceOf(bob) == 200 && token.balanceOf(alice) == 300 && token.totalSupply() == 500);
-   │                                                                          ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:38:104
-   │
-38 │         require(token.balanceOf(bob) == 200 && token.balanceOf(alice) == 300 && token.totalSupply() == 500);
-   │                                                                                                        ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:44:32
-   │
-44 │         token.transfer(address(99), 1);
-   │                                ━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:55:35
-   │
-55 │         vm.warp(block.timestamp + 101);
-   │                                   ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:62:26
-   │
-62 │         rules.setCountry(840, false);
-   │                          ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Invariant.t.sol:41:36
-   │
-41 │         ids.attest(address(0xB0B), 840, type(uint64).max, bytes32(uint256(2)));
-   │                                    ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[mixed-case-function]: function names should use mixedCase
-    ╭▸ test/RedemptionSymbolic.t.sol:112:14
-    │
-112 │     function check_UnauthorizedConfirm(bytes32 ref, uint256 units, bytes32 payment, bytes32 receipt) public {
-    │              ━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using: `checkUnauthorizedConfirm`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ test/RedemptionSymbolic.t.sol:5:11
-  │
-5 │ interface SymVm {
-  │           ━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ test/RedemptionSymbolic.t.sol:10:10
-   │
-10 │ contract Stranger {
-   │          ━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ test/RedemptionSymbolic.t.sol:22:10
-   │
-22 │ contract RedemptionSymbolic {
-   │          ━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint64' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
 
 note[custom-errors]: prefer using custom errors on revert and require calls
     ╭▸ src/Platform.sol:172:9
@@ -994,30 +858,6 @@ note[custom-errors]: prefer using custom errors on revert and require calls
     │
     ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Invariant.t.sol:42:52
-   │
-42 │         manager.issue(bytes32(uint256(1)), address(0xA11CE), 500);
-   │                                                    ━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:69:24
-   │
-69 │         rules.setLimit(100);
-   │                        ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/Platform.t.sol:72:29
-   │
-72 │         token.transfer(bob, 101);
-   │                             ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
 note[custom-errors]: prefer using custom errors on revert and require calls
     ╭▸ src/Platform.sol:179:9
     │
@@ -1026,11 +866,27 @@ note[custom-errors]: prefer using custom errors on revert and require calls
     │
     ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/RedemptionInvariant.t.sol:136:25
+    │
+136 │         for (uint256 i; i < parties.length; ++i) {
+    │                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/RedemptionInvariant.t.sol:140:13
+    │
+140 │             sumReserved += reserved;
+    │             ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:35:26
+   ╭▸ test/ApprovalSymbolic.t.sol:21:39
    │
-35 │         rules.setCountry(840, true);
-   │                          ━━━
+21 │         approval.propose(ref, address(3), units);
+   │                                       ━
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
@@ -1043,6 +899,182 @@ note[custom-errors]: prefer using custom errors on revert and require calls
 189 │ ┃             "restricted issuance"
 190 │ ┃         );
     │ ┗━━━━━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:37:32
+   │
+37 │         identities.attest(BOB, 840, type(uint64).max, bytes32(uint256(2)));
+   │                                ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:38:51
+   │
+38 │         manager.issue(bytes32(uint256(1)), ALICE, 400);
+   │                                                   ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:198:9
+    │
+198 │         require(!paused && !frozen[holder] && compliance.eligible(holder), "restricted reservation");
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:32:51
+   │
+32 │         manager.issue(bytes32(uint256(1)), alice, 500);
+   │                                                   ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:37:29
+   │
+37 │         token.transfer(bob, 200);
+   │                             ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:39:49
+   │
+39 │         manager.issue(bytes32(uint256(2)), BOB, 100);
+   │                                                 ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:38:41
+   │
+38 │         require(token.balanceOf(bob) == 200 && token.balanceOf(alice) == 300 && token.totalSupply() == 500);
+   │                                         ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:38:74
+   │
+38 │         require(token.balanceOf(bob) == 200 && token.balanceOf(alice) == 300 && token.totalSupply() == 500);
+   │                                                                          ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:49:47
+   │
+49 │         if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0) return;
+   │                                               ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:53:39
+   │
+53 │         assert(token.totalSupply() == 500 - units);
+   │                                       ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:199:9
+    │
+199 │         require(units > 0 && units <= balanceOf[holder] - reserved[holder], "invalid reservation");
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Invariant.t.sol:39:26
+   │
+39 │         rules.setCountry(840, true);
+   │                          ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Invariant.t.sol:40:28
+   │
+40 │         ids.attest(address(0xA11CE), 840, type(uint64).max, bytes32(uint256(1)));
+   │                            ━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Invariant.t.sol:40:38
+   │
+40 │         ids.attest(address(0xA11CE), 840, type(uint64).max, bytes32(uint256(1)));
+   │                                      ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Invariant.t.sol:41:28
+   │
+41 │         ids.attest(address(0xB0B), 840, type(uint64).max, bytes32(uint256(2)));
+   │                            ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/RedemptionInvariant.t.sol:137:32
+    │
+137 │             uint256 reserved = token.reserved(parties[i]);
+    │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Invariant.t.sol:41:36
+   │
+41 │         ids.attest(address(0xB0B), 840, type(uint64).max, bytes32(uint256(2)));
+   │                                    ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Invariant.t.sol:42:52
+   │
+42 │         manager.issue(bytes32(uint256(1)), address(0xA11CE), 500);
+   │                                                    ━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:210:9
+    │
+210 │         require(amount > 0 && balanceOf[from] - reserved[from] >= amount, "invalid burn");
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+    ╭▸ src/Platform.sol:218:40
+    │
+218 │     PermissionedToken public immutable token;
+    │                                        ━━━━━ help: consider using: `TOKEN`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/RedemptionInvariant.t.sol:138:31
+    │
+138 │             uint256 balance = token.balanceOf(parties[i]);
+    │                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:253:9
+    │
+253 │         require(ref != 0 && !processed[ref], "duplicate reference");
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
@@ -1063,10 +1095,50 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:38:104
+   │
+38 │         require(token.balanceOf(bob) == 200 && token.balanceOf(alice) == 300 && token.totalSupply() == 500);
+   │                                                                                                        ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[custom-errors]: prefer using custom errors on revert and require calls
+    ╭▸ src/Platform.sol:261:9
+    │
+261 │         require(ref != 0 && !redeemed[msg.sender][ref], "duplicate reference");
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Invariant.t.sol:53:41
    │
 53 │         require(token.balanceOf(address(0xA11CE)) + token.balanceOf(address(0xB0B)) == 500);
    │                                         ━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ test/RedemptionInvariant.t.sol:139:13
+    │
+139 │             require(reserved <= balance);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:54:42
+   │
+54 │         assert(token.balanceOf(ALICE) == 400 - units);
+   │                                          ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:56:40
+   │
+56 │         assert(token.balanceOf(BOB) == 100);
+   │                                        ━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
@@ -1079,12 +1151,164 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:65:47
+   │
+65 │         if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0 || other == 0 || other == receipt) {
+   │                                               ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:77:39
+   │
+77 │         assert(token.totalSupply() == 500 - units);
+   │                                       ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:78:42
+   │
+78 │         assert(token.balanceOf(ALICE) == 400 - units);
+   │                                          ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:44:32
+   │
+44 │         token.transfer(address(99), 1);
+   │                                ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Invariant.t.sol:53:88
    │
 53 │         require(token.balanceOf(address(0xA11CE)) + token.balanceOf(address(0xB0B)) == 500);
    │                                                                                        ━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/RedemptionSymbolic.t.sol:93:77
+   │
+93 │             refA == 0 || refB == 0 || refA == refB || units == 0 || units > 100 || payment == 0 || receiptA == 0
+   │                                                                             ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:55:35
+   │
+55 │         vm.warp(block.timestamp + 101);
+   │                                   ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+   ╭▸ test/Invariant.t.sol:53:17
+   │
+53 │         require(token.balanceOf(address(0xA11CE)) + token.balanceOf(address(0xB0B)) == 500);
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+   ╭▸ test/Invariant.t.sol:54:17
+   │
+54 │         require(token.balanceOf(address(0)) == 0);
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:62:26
+   │
+62 │         rules.setCountry(840, false);
+   │                          ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ src/Platform.sol:4:10
+  │
+4 │ contract Controlled {
+  │          ━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:69:24
+   │
+69 │         rules.setLimit(100);
+   │                        ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/RedemptionSymbolic.t.sol:106:40
+    │
+106 │         assert(token.balanceOf(BOB) == 100);
+    │                                        ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ src/Platform.sol:17:10
+   │
+17 │ contract IdentityRegistry is Controlled {
+   │          ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ src/Platform.sol:46:10
+   │
+46 │ contract ComplianceEngine is Controlled {
+   │          ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/RedemptionSymbolic.t.sol:108:39
+    │
+108 │         assert(token.totalSupply() == 500 - units);
+    │                                       ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/RedemptionSymbolic.t.sol:113:47
+    │
+113 │         if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0) return;
+    │                                               ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Platform.t.sol:72:29
+   │
+72 │         token.transfer(bob, 101);
+   │                             ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ src/Platform.sol:78:10
+   │
+78 │ contract AssetRegistry is Controlled {
+   │          ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+    ╭▸ src/Platform.sol:104:10
+    │
+104 │ contract PermissionedToken is Controlled {
+    │          ━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
    ╭▸ test/Platform.t.sol:98:28
@@ -1103,118 +1327,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:36:34
-   │
-36 │         identities.attest(ALICE, 840, type(uint64).max, bytes32(uint256(1)));
-   │                                  ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-   ╭▸ test/Invariant.t.sol:53:17
-   │
-53 │         require(token.balanceOf(address(0xA11CE)) + token.balanceOf(address(0xB0B)) == 500);
-   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:37:32
-   │
-37 │         identities.attest(BOB, 840, type(uint64).max, bytes32(uint256(2)));
-   │                                ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:38:51
-   │
-38 │         manager.issue(bytes32(uint256(1)), ALICE, 400);
-   │                                                   ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:39:49
-   │
-39 │         manager.issue(bytes32(uint256(2)), BOB, 100);
-   │                                                 ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:49:47
-   │
-49 │         if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0) return;
-   │                                               ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:53:39
-   │
-53 │         assert(token.totalSupply() == 500 - units);
-   │                                       ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:54:42
-   │
-54 │         assert(token.balanceOf(ALICE) == 400 - units);
-   │                                          ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:56:40
-   │
-56 │         assert(token.balanceOf(BOB) == 100);
-   │                                        ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-   ╭▸ test/Invariant.t.sol:54:17
-   │
-54 │         require(token.balanceOf(address(0)) == 0);
-   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:198:9
-    │
-198 │         require(!paused && !frozen[holder] && compliance.eligible(holder), "restricted reservation");
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:65:47
-   │
-65 │         if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0 || other == 0 || other == receipt) {
-   │                                               ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:199:9
-    │
-199 │         require(units > 0 && units <= balanceOf[holder] - reserved[holder], "invalid reservation");
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:77:39
-   │
-77 │         assert(token.totalSupply() == 500 - units);
-   │                                       ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:101:77
     │
 101 │         require(token.allowance(alice, bob) == 0 && token.balanceOf(bob) == 20);
@@ -1222,13 +1334,29 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+    ╭▸ src/Platform.sol:217:10
+    │
+217 │ contract IssuanceManager is Controlled {
+    │          ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:78:42
-   │
-78 │         assert(token.balanceOf(ALICE) == 400 - units);
-   │                                          ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+    ╭▸ test/RedemptionSymbolic.t.sol:119:42
+    │
+119 │         assert(token.balanceOf(ALICE) == 400);
+    │                                          ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/RedemptionSymbolic.t.sol:120:39
+    │
+120 │         assert(token.totalSupply() == 500);
+    │                                       ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:106:28
@@ -1245,30 +1373,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                                        ━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-   ╭▸ test/RedemptionSymbolic.t.sol:93:77
-   │
-93 │             refA == 0 || refB == 0 || refA == refB || units == 0 || units > 100 || payment == 0 || receiptA == 0
-   │                                                                             ━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:210:9
-    │
-210 │         require(amount > 0 && balanceOf[from] - reserved[from] >= amount, "invalid burn");
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
-    ╭▸ src/Platform.sol:218:40
-    │
-218 │     PermissionedToken public immutable token;
-    │                                        ━━━━━ help: consider using: `TOKEN`
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:111:48
@@ -1310,43 +1414,11 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:253:9
-    │
-253 │         require(ref != 0 && !processed[ref], "duplicate reference");
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-    ╭▸ test/RedemptionSymbolic.t.sol:106:40
-    │
-106 │         assert(token.balanceOf(BOB) == 100);
-    │                                        ━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-    ╭▸ test/RedemptionSymbolic.t.sol:108:39
-    │
-108 │         assert(token.totalSupply() == 500 - units);
-    │                                       ━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:144:31
     │
 144 │         token.transfer(alice, 500);
     │                               ━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-    ╭▸ test/RedemptionSymbolic.t.sol:113:47
-    │
-113 │         if (ref == 0 || units == 0 || units > 400 || payment == 0 || receipt == 0) return;
-    │                                               ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
@@ -1359,28 +1431,12 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-    ╭▸ test/RedemptionSymbolic.t.sol:119:42
-    │
-119 │         assert(token.balanceOf(ALICE) == 400);
-    │                                          ━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:149:36
     │
 149 │         uint256 n = uint256(raw) % 501;
     │                                    ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[custom-errors]: prefer using custom errors on revert and require calls
-    ╭▸ src/Platform.sol:261:9
-    │
-261 │         require(ref != 0 && !redeemed[msg.sender][ref], "duplicate reference");
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/custom-errors
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:157:92
@@ -1398,14 +1454,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-  ╭▸ src/Platform.sol:4:10
-  │
-4 │ contract Controlled {
-  │          ━━━━━━━━━━
-  │
-  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:159:92
     │
@@ -1414,19 +1462,65 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+   ╭▸ src/Platform.sol:11:5
+   │
+11 │ ┏     modifier onlyOwner() {
+12 │ ┃         if (msg.sender != owner) revert Unauthorized();
+13 │ ┃         _;
+14 │ ┃     }
+   │ ┗━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+   ╭╴
+11 ±     modifier onlyOwner() {
+12 +         _onlyOwner();
+13 +         _;
+14 +     }
+15 + 
+16 +     function _onlyOwner() internal {
+17 +         if (msg.sender != owner) revert Unauthorized();
+18 +     }
+   ╰╴
+
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+   ╭▸ test/RedemptionSymbolic.t.sol:54:16
+   │
+54 │         assert(token.balanceOf(ALICE) == 400 - units);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ src/Platform.sol:27:57
+   │
+27 │         require(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0, "invalid claim");
+   │                                                         ━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+   ╭▸ test/RedemptionSymbolic.t.sol:56:16
+   │
+56 │         assert(token.balanceOf(BOB) == 100);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ src/Platform.sol:28:30
+   │
+28 │         identities[wallet] = Identity(country, expires, evidenceHash);
+   │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Identity({ country: country, expires: expires, evidenceHash: evidenceHash })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:159:98
     │
 159 │         assets.register(bytes32(uint256(1)), bytes32(uint256(2)), uint64(block.timestamp + 100), 10000, address(token));
     │                                                                                                  ━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
-    ╭▸ test/RedemptionSymbolic.t.sol:120:39
-    │
-120 │         assert(token.totalSupply() == 500);
-    │                                       ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
@@ -1438,6 +1532,14 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+   ╭▸ test/RedemptionSymbolic.t.sol:78:16
+   │
+78 │         assert(token.balanceOf(ALICE) == 400 - units);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:166:37
     │
@@ -1445,46 +1547,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                                     ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ src/Platform.sol:17:10
-   │
-17 │ contract IdentityRegistry is Controlled {
-   │          ━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ src/Platform.sol:46:10
-   │
-46 │ contract ComplianceEngine is Controlled {
-   │          ━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-   ╭▸ src/Platform.sol:78:10
-   │
-78 │ contract AssetRegistry is Controlled {
-   │          ━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-    ╭▸ src/Platform.sol:104:10
-    │
-104 │ contract PermissionedToken is Controlled {
-    │          ━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
-
-note[multi-contract-file]: prefer having only one contract, interface or library per file
-    ╭▸ src/Platform.sol:217:10
-    │
-217 │ contract IssuanceManager is Controlled {
-    │          ━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:177:24
@@ -1510,6 +1572,22 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ src/Platform.sol:38:16
+   │
+38 │         return identities[wallet].expires > block.timestamp;
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+    ╭▸ test/RedemptionSymbolic.t.sol:106:16
+    │
+106 │         assert(token.balanceOf(BOB) == 100);
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:201:25
     │
@@ -1518,14 +1596,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-   ╭▸ test/RedemptionSymbolic.t.sol:54:16
-   │
-54 │         assert(token.balanceOf(ALICE) == 400 - units);
-   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
-
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:217:29
     │
@@ -1533,14 +1603,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                             ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-   ╭▸ test/RedemptionSymbolic.t.sol:56:16
-   │
-56 │         assert(token.balanceOf(BOB) == 100);
-   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:266:43
@@ -1574,27 +1636,13 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
-   ╭▸ src/Platform.sol:11:5
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ src/Platform.sol:95:46
    │
-11 │ ┏     modifier onlyOwner() {
-12 │ ┃         if (msg.sender != owner) revert Unauthorized();
-13 │ ┃         _;
-14 │ ┃     }
-   │ ┗━━━━━┛
+95 │             id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0
+   │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━
    │
-   ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
-help: wrap modifier logic to reduce code size
-   ╭╴
-11 ±     modifier onlyOwner() {
-12 +         _onlyOwner();
-13 +         _;
-14 +     }
-15 + 
-16 +     function _onlyOwner() internal {
-17 +         if (msg.sender != owner) revert Unauthorized();
-18 +     }
-   ╰╴
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:286:26
@@ -1611,6 +1659,14 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                                        ━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ src/Platform.sol:99:22
+   │
+99 │         assets[id] = Asset(documentsHash, maturity, cap, token);
+   │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Asset({ documentsHash: documentsHash, maturity: maturity, issuanceCap: cap, token: token })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:306:39
@@ -1636,14 +1692,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
-   ╭▸ src/Platform.sol:27:57
-   │
-27 │         require(wallet != address(0) && country != 0 && expires > block.timestamp && evidenceHash != 0, "invalid claim");
-   │                                                         ━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
-
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:310:40
     │
@@ -1668,13 +1716,27 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[named-struct-fields]: prefer initializing structs with named fields
-   ╭▸ src/Platform.sol:28:30
-   │
-28 │         identities[wallet] = Identity(country, expires, evidenceHash);
-   │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Identity({ country: country, expires: expires, evidenceHash: evidenceHash })`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/Platform.sol:130:5
+    │
+130 │ ┏     modifier onlyManager() {
+131 │ ┃         require(msg.sender == manager, "manager only");
+132 │ ┃         _;
+133 │ ┃     }
+    │ ┗━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+130 ±     modifier onlyManager() {
+131 +         _onlyManager();
+132 +         _;
+133 +     }
+134 + 
+135 +     function _onlyManager() internal {
+136 +         require(msg.sender == manager, "manager only");
+137 +     }
+    ╰╴
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:320:31
@@ -1692,6 +1754,14 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
+    ╭▸ test/RedemptionSymbolic.t.sol:119:16
+    │
+119 │         assert(token.balanceOf(ALICE) == 400);
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:336:47
     │
@@ -1699,14 +1769,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                                               ━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
-   ╭▸ src/Platform.sol:38:16
-   │
-38 │         return identities[wallet].expires > block.timestamp;
-   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:349:60
@@ -1756,14 +1818,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-   ╭▸ test/RedemptionSymbolic.t.sol:78:16
-   │
-78 │         assert(token.balanceOf(ALICE) == 400 - units);
-   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
-
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:386:43
     │
@@ -1779,30 +1833,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                                          ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
-   ╭▸ src/Platform.sol:95:46
-   │
-95 │             id != 0 && documentsHash != 0 && maturity > block.timestamp && cap > 0 && token.code.length > 0
-   │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
-
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-    ╭▸ test/RedemptionSymbolic.t.sol:106:16
-    │
-106 │         assert(token.balanceOf(BOB) == 100);
-    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
-
-note[named-struct-fields]: prefer initializing structs with named fields
-   ╭▸ src/Platform.sol:99:22
-   │
-99 │         assets[id] = Asset(documentsHash, maturity, cap, token);
-   │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `Asset({ documentsHash: documentsHash, maturity: maturity, issuanceCap: cap, token: token })`
-   │
-   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:397:75
@@ -1827,14 +1857,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │                                                                         ━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
-
-warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
-    ╭▸ test/RedemptionSymbolic.t.sol:119:16
-    │
-119 │         assert(token.balanceOf(ALICE) == 400);
-    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
 
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:402:103
@@ -1876,28 +1898,6 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
-note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
-    ╭▸ src/Platform.sol:130:5
-    │
-130 │ ┏     modifier onlyManager() {
-131 │ ┃         require(msg.sender == manager, "manager only");
-132 │ ┃         _;
-133 │ ┃     }
-    │ ┗━━━━━┛
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
-help: wrap modifier logic to reduce code size
-    ╭╴
-130 ±     modifier onlyManager() {
-131 +         _onlyManager();
-132 +         _;
-133 +     }
-134 + 
-135 +     function _onlyManager() internal {
-136 +         require(msg.sender == manager, "manager only");
-137 +     }
-    ╰╴
-
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:431:42
     │
@@ -1938,6 +1938,14 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/Platform.sol:256:9
+    │
+256 │         emit Issued(ref, investor, amount);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
 note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
     ╭▸ test/Platform.t.sol:454:64
     │
@@ -1962,6 +1970,30 @@ note[literal-instead-of-constant]: this literal appears multiple times in the co
     │
     ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
 
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/Platform.sol:264:9
+    │
+264 │         emit Redeemed(ref, msg.sender, amount);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/Platform.sol:274:9
+    │
+274 │         emit RedemptionRequested(msg.sender, ref, units);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/Platform.sol:282:9
+    │
+282 │         emit RedemptionCancelled(msg.sender, ref);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
 warning[unsafe-typecast]: typecasts that can truncate values should be checked
    ╭▸ test/Platform.t.sol:30:32
    │
@@ -1975,6 +2007,14 @@ warning[unsafe-typecast]: typecasts that can truncate values should be checked
    │       
    │       
    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/Platform.sol:298:9
+    │
+298 │         emit RedemptionCancelled(holder, ref);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
 
 warning[unsafe-typecast]: typecasts that can truncate values should be checked
    ╭▸ test/Platform.t.sol:31:30
@@ -2013,6 +2053,14 @@ warning[incorrect-strict-equality]: dangerous strict equality check on an extern
    │                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    │
    ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/Platform.sol:316:9
+    │
+316 │         emit RedemptionSettled(holder, ref, receipt, payment, request.units);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
 
 warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
    ╭▸ test/Platform.t.sol:44:9
@@ -2070,14 +2118,6 @@ warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls sho
    │
    ╰ help: https://getfoundry.sh/forge/linting/erc20-unchecked-transfer
 
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-    ╭▸ src/Platform.sol:256:9
-    │
-256 │         emit Issued(ref, investor, amount);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
-
 warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
    ╭▸ test/Platform.t.sol:93:9
    │
@@ -2093,14 +2133,6 @@ warning[arbitrary-send-erc20]: `transferFrom` uses an arbitrary `from`; require 
     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-erc20
-
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-    ╭▸ src/Platform.sol:264:9
-    │
-264 │         emit Redeemed(ref, msg.sender, amount);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
 
 warning[unused-return]: Return value of an external call is not used
    ╭▸ test/Platform.t.sol:98:9
@@ -2134,14 +2166,6 @@ warning[arbitrary-send-erc20]: `transferFrom` uses an arbitrary `from`; require 
     │
     ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-erc20
 
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-    ╭▸ src/Platform.sol:274:9
-    │
-274 │         emit RedemptionRequested(msg.sender, ref, units);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
-
 warning[unused-return]: Return value of an external call is not used
     ╭▸ test/Platform.t.sol:106:9
     │
@@ -2149,14 +2173,6 @@ warning[unused-return]: Return value of an external call is not used
     │         ━━━━━━━━━━━━━━━━━━━━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/unused-return
-
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-    ╭▸ src/Platform.sol:282:9
-    │
-282 │         emit RedemptionCancelled(msg.sender, ref);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
 
 warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
     ╭▸ test/Platform.t.sol:110:9
@@ -2166,14 +2182,6 @@ warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls sho
     │
     ╰ help: https://getfoundry.sh/forge/linting/erc20-unchecked-transfer
 
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-    ╭▸ src/Platform.sol:298:9
-    │
-298 │         emit RedemptionCancelled(holder, ref);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
-
 warning[incorrect-strict-equality]: dangerous strict equality check on an externally-influenced value
     ╭▸ test/Platform.t.sol:133:47
     │
@@ -2181,14 +2189,6 @@ warning[incorrect-strict-equality]: dangerous strict equality check on an extern
     │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     │
     ╰ help: https://getfoundry.sh/forge/linting/incorrect-strict-equality
-
-warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
-    ╭▸ src/Platform.sol:316:9
-    │
-316 │         emit RedemptionSettled(holder, ref, receipt, payment, request.units);
-    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    │
-    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
 
 warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
     ╭▸ test/Platform.t.sol:144:9
@@ -2409,4 +2409,4 @@ warning[incorrect-strict-equality]: dangerous strict equality check on an extern
 
 Running 1 tests for test/ApprovalSymbolic.t.sol:ApprovalSymbolic
 [32m[PASS][0m check_IssuerCannotExecute(bytes32,uint256) (paths: 4, time: 0.08s, bounds: [])
-Symbolic test result: 1 passed; 0 failed; time: 0.77s
+Symbolic test result: 1 passed; 0 failed; time: 0.72s

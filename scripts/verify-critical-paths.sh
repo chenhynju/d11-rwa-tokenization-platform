@@ -8,7 +8,7 @@ command -v halmos >/dev/null
 command -v echidna >/dev/null
 test "$(halmos --version)" = 'halmos 0.3.3'
 echidna --version | grep -F 'Echidna 2.3.3'
-compiler="${SOLC_BINARY:-$HOME/.local/share/svm/0.8.24/solc-0.8.24}"
+compiler="${SOLC_BINARY:-$HOME/.local/share/svm/0.8.38/solc-0.8.38}"
 test -x "$compiler"
 FOUNDRY_DYNAMIC_TEST_LINKING=false FOUNDRY_OUT=out-halmos   halmos --contract ApprovalSymbolic --forge-build-out out-halmos   > evidence/halmos-static-link.txt 2>&1
 grep -F 'Symbolic test result: 1 passed; 0 failed' evidence/halmos-static-link.txt
